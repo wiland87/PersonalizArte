@@ -34,10 +34,14 @@
 </head>
 <body class="text-stone-800 selection:bg-amber-200 selection:text-stone-900">
 
-    <!-- BARRA DE NAVEGACIÓN -->
+    <!-- =========================================================================================
+         📌 SECCIÓN 1: BARRA DE NAVEGACIÓN (CABECERA)
+         Aquí puedes cambiar el Logo, el Nombre de la marca y tu link principal de WhatsApp.
+         ========================================================================================= -->
     <header class="sticky top-0 z-40 w-full glass-nav border-b border-stone-200/60 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo Creativo Integrado con Imagen -->
+            
+            <!-- LOGO Y NOMBRE DE LA MARCA: Puedes cambiar "logo.jpg" por la imagen que subas a GitHub -->
             <div class="flex items-center gap-3">
                 <div class="w-12 h-12 rounded-xl overflow-hidden shadow-md border border-stone-200 bg-white flex items-center justify-center shrink-0">
                     <img src="logo.jpg" alt="Logo personalizARTE" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-tr from-amber-500 via-rose-500 to-indigo-600 flex items-center justify-center text-white\'><i class=\'fa-solid fa-wand-magic-sparkles text-lg animate-pulse\'></i></div>';">
@@ -50,7 +54,7 @@
                 </div>
             </div>
             
-            <!-- Links de Navegación -->
+            <!-- ENLACES DEL MENÚ: Puedes cambiar las palabras de redirección si lo deseas -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-600">
                 <a href="#catalogo" class="hover:text-amber-600 transition-colors">Productos</a>
                 <a href="#combos" class="hover:text-rose-600 transition-colors font-bold flex items-center gap-1.5 text-rose-700 bg-rose-50 px-3 py-1.5 rounded-lg border border-rose-100">
@@ -67,7 +71,7 @@
                 <a href="#contacto" class="hover:text-amber-600 transition-colors">Contacto</a>
             </nav>
 
-            <!-- Acción Principal -->
+            <!-- BOTÓN PRINCIPAL DE WHATSAPP: Recuerda mantener tu número 3043518387 -->
             <div class="flex items-center gap-3">
                 <a href="https://wa.me/573043518387" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-xl shadow-lg shadow-emerald-600/10 flex items-center gap-2 transition-all hover:scale-105 active:scale-95">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
@@ -77,20 +81,31 @@
         </div>
     </header>
 
-    <!-- HERO BANNER -->
+    <!-- =========================================================================================
+         📌 SECCIÓN 2: HERO BANNER (PORTADA PRINCIPAL DE BIENVENIDA)
+         Aquí puedes cambiar el título grande de bienvenida, el eslogan y los textos descriptivos.
+         ========================================================================================= -->
     <section class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-amber-50/40 via-white to-transparent">
         <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-70"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <!-- Etiqueta pequeña decorativa -->
             <span class="inline-block bg-rose-50 text-rose-700 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4 border border-rose-100">
                 🎨 Ediciones Especiales & Regalos Únicos
             </span>
+            
+            <!-- Título Principal y Llamativo -->
             <h1 class="text-4xl sm:text-6xl font-extrabold font-serif-title text-stone-900 tracking-tight leading-none mb-6">
                 El arte de regalar<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600">historias personalizadas.</span>
             </h1>
+            
+            <!-- Texto Descriptivo Corto de la tienda -->
             <p class="max-w-2xl mx-auto text-stone-600 text-base sm:text-lg mb-10 leading-relaxed">
                 Descubre nuestra amplia variedad de Mugs de 11oz, agendas de diseño, retablos rústicos, llaveros grabados y botones hechos a tu medida. Diseños 100% personalizados con acabados perfectos.
             </p>
+            
+            <!-- Botones de Acción de la Portada -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#catalogo" class="w-full sm:w-auto px-8 py-3.5 bg-stone-900 hover:bg-stone-800 text-white font-semibold rounded-xl transition-all shadow-xl shadow-stone-900/10 hover:shadow-stone-900/20 text-center">
                     Explorar Catálogo
@@ -103,10 +118,15 @@
         </div>
     </section>
 
-    <!-- GALERÍA DE PRODUCTOS POR SECCIONES -->
+    <!-- =========================================================================================
+         📌 SECCIÓN 3: ESTRUCTURA DEL CATÁLOGO DE PRODUCTOS (HTML)
+         Aquí NO debes cambiar nada del código del producto directamente. Los productos, precios y 
+         fotos se modifican más abajo en el código JAVASCRIPT (Base de Datos). 
+         Aquí solo puedes editar el título "Catálogo de Productos" y el subtítulo.
+         ========================================================================================= -->
     <main id="catalogo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
-        <!-- Buscador y Títulos -->
+        <!-- Textos del Buscador de la Tienda -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-stone-200 pb-8">
             <div>
                 <h2 class="text-3xl font-extrabold font-serif-title text-stone-900">Catálogo de Productos</h2>
@@ -120,7 +140,7 @@
             </div>
         </div>
 
-        <!-- Pestañas de Categorías Traducidas a tus Secciones Específicas -->
+        <!-- Pestañas de Categorías (Botones de Filtro) -->
         <div class="flex overflow-x-auto pb-4 mb-10 -mx-4 px-4 scrollbar-none gap-2" id="categoriesTabs">
             <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-stone-900 text-white shadow-md transition-all" data-sec="todos">
                 🌟 Mostrar Todo
@@ -129,28 +149,29 @@
                 ☕ Mugs 11 Onzas
             </button>
             <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="agendas">
-                📔 Agendas & Libretas
-            </button>
-            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="llaveros">
-                🔑 Llaveros Grabados
+                📔 Agendas
             </button>
             <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="botones">
-                🔘 Botones & Pines
+                🔘 Botones
+            </button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="vasos">
+                🥤 Vasos Viajeros
+            </button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="alcancias">
+                🐖 Alcancías
+            </button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="ramos">
+                💐 Ramos
             </button>
             <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="retablos">
-                🖼️ Retablos & Madera
-            </button>
-            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="detalles">
-                🎁 Detalles Especiales
+                🖼️ Retablos
             </button>
         </div>
 
-        <!-- Contenedor Grid Principal de Productos -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="catalogGrid">
-            <!-- Cargado de forma dinámica con JS -->
-        </div>
+        <!-- Contenedor Grid Principal de Productos (No tocar, se llena con JS) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="catalogGrid"></div>
 
-        <!-- Sin Resultados -->
+        <!-- Alerta cuando no hay coincidencias de búsqueda -->
         <div id="noProductsFound" class="hidden text-center py-20 bg-stone-50 rounded-3xl border border-dashed border-stone-200">
             <div class="w-16 h-16 bg-white shadow-sm text-stone-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i class="fa-solid fa-folder-open text-xl"></i>
@@ -160,12 +181,16 @@
         </div>
     </main>
 
-    <!-- SECCIÓN COMBOS ESPECIALES -->
+    <!-- =========================================================================================
+         📌 SECCIÓN 4: COMBOS ESPECIALES (CON DESCUENTOS DESTACADOS)
+         Aquí puedes cambiar manualmente las fotos, precios, títulos y ahorros de cada Combo.
+         Cada combo tiene un botón que abre un chat con tu número de WhatsApp 3043518387.
+         ========================================================================================= -->
     <section id="combos" class="relative py-20 bg-gradient-to-tr from-amber-50/60 via-rose-50/40 to-indigo-50/50 border-t border-stone-200/80 overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(#f43f5e_0.5px,transparent_0.5px)] [background-size:20px_20px] opacity-10"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Encabezado de la sección -->
+            <!-- Textos Informativos de Combos -->
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="inline-block bg-rose-100 text-rose-700 text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4 border border-rose-200">
                     🔥 Súper Ofertas Imperdibles
@@ -181,15 +206,15 @@
             <!-- Grid de Tarjetas de Combos -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Combo 1: Combo Oficina Pro -->
+                <!-- 📦 TARJETA DEL COMBO 1 (Combo Ejecutivo Pro) -->
                 <div class="bg-white rounded-3xl border border-stone-200/80 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between hover:border-amber-500/40 group relative">
-                    <!-- Insignia de Descuento -->
+                    <!-- Cantidad de dinero ahorrado -->
                     <div class="absolute top-4 right-4 bg-amber-500 text-stone-950 text-xs font-black px-3 py-1.5 rounded-full shadow-md z-10 animate-bounce">
                         Ahorras $8.100
                     </div>
                     
                     <div>
-                        <!-- Imagen representativa -->
+                        <!-- Foto del Combo (Puedes cambiar el link de internet por tu archivo local de foto en GitHub) -->
                         <div class="relative h-56 bg-stone-100 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=600&auto=format&fit=crop&q=80" alt="Combo Oficina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -198,12 +223,12 @@
                             </div>
                         </div>
                         
-                        <!-- Información -->
+                        <!-- Textos descriptivos del Combo 1 -->
                         <div class="p-6 sm:p-8 space-y-3">
                             <h3 class="text-xl font-bold text-stone-900 font-serif-title">Combo Ejecutivo Pro</h3>
                             <p class="text-xs text-stone-500 leading-relaxed">Perfecto para organizarse con estilo en el escritorio o dar un regalo corporativo de alta recordación.</p>
                             
-                            <!-- Lista de elementos del Combo -->
+                            <!-- Lista de cosas incluidas -->
                             <ul class="space-y-2 pt-2 border-t border-stone-100 text-xs text-stone-600">
                                 <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> 1 Agenda Ejecutiva A5 Pasta Dura</li>
                                 <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> 1 Mug de 11 oz Premium Cerámica Blanco</li>
@@ -212,7 +237,7 @@
                         </div>
                     </div>
 
-                    <!-- Precios y Botón de Acción -->
+                    <!-- Precios e interacción del Combo 1 (Asegúrate de editar ambos precios: anterior y oferta) -->
                     <div class="p-6 sm:p-8 pt-0 border-t border-stone-50 bg-stone-50/50">
                         <div class="flex items-end justify-between mb-4">
                             <div>
@@ -222,6 +247,7 @@
                             <span class="text-[10px] text-amber-700 bg-amber-50 px-2 py-1 rounded font-bold border border-amber-100">Descuento -19%</span>
                         </div>
                         
+                        <!-- Mensaje que te llegará a tu WhatsApp 3043518387 al dar click -->
                         <a href="https://wa.me/573043518387?text=¡Hola personalizARTE! Me interesa mucho el *Combo Ejecutivo Pro* (Agenda A5 + Mug Premium) en oferta por $34.900 para personalizarlo." target="_blank" class="w-full bg-stone-900 hover:bg-stone-800 text-white font-bold py-3.5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md">
                             <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
                             Cotizar este Combo
@@ -229,19 +255,17 @@
                     </div>
                 </div>
 
-                <!-- Combo 2: Combo Parejas Forever -->
+                <!-- 📦 TARJETA DEL COMBO 2 (Combo Parejas Enamora) -->
                 <div class="bg-white rounded-3xl border-2 border-rose-500/30 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between hover:border-rose-500 group relative">
-                    <!-- Insignia especial -->
                     <div class="absolute top-4 left-4 bg-rose-600 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-md z-10">
                         💘 Súper Destacado
                     </div>
-                    <!-- Insignia de Descuento -->
                     <div class="absolute top-4 right-4 bg-rose-600 text-white text-xs font-black px-3 py-1.5 rounded-full shadow-md z-10 animate-pulse">
                         Ahorras $9.500
                     </div>
                     
                     <div>
-                        <!-- Imagen representativa -->
+                        <!-- Foto del Combo -->
                         <div class="relative h-56 bg-stone-100 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80" alt="Combo Parejas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -250,12 +274,12 @@
                             </div>
                         </div>
                         
-                        <!-- Información -->
+                        <!-- Textos descriptivos -->
                         <div class="p-6 sm:p-8 space-y-3">
                             <h3 class="text-xl font-bold text-stone-900 font-serif-title">Combo Parejas "Con Sentido"</h3>
                             <p class="text-xs text-stone-500 leading-relaxed">El kit definitivo para aniversarios, cumpleaños o simplemente para recordar un momento inolvidable juntos.</p>
                             
-                            <!-- Lista de elementos del Combo -->
+                            <!-- Lista de cosas incluidas -->
                             <ul class="space-y-2 pt-2 border-t border-stone-100 text-xs text-stone-600">
                                 <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-rose-500"></i> 2 Mugs de 11 oz Premium Cerámica Blancos</li>
                                 <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-rose-500"></i> 2 Llaveros de Cuero con Grabado Láser</li>
@@ -264,7 +288,7 @@
                         </div>
                     </div>
 
-                    <!-- Precios y Botón de Acción -->
+                    <!-- Precios e interacción -->
                     <div class="p-6 sm:p-8 pt-0 border-t border-stone-50 bg-rose-50/20">
                         <div class="flex items-end justify-between mb-4">
                             <div>
@@ -274,22 +298,22 @@
                             <span class="text-[10px] text-rose-700 bg-rose-50 px-2 py-1 rounded font-bold border border-rose-100">Descuento -21%</span>
                         </div>
                         
-                        <a href="https://wa.me/573043518387?text=¡Hola personalizARTE! Quiero ordenar el *Combo Parejas Con Sentido* (2 Mugs + 2 Llaveros de Cuero) en oferta por $36.500. ¿Cómo acordamos las imágenes para estampar?" target="_blank" class="w-full bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-bold py-3.5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-rose-600/10">
+                        <!-- Mensaje WhatsApp -->
+                        <a href="https://wa.me/573043518387?text=¡Hola personalizARTE! Quiero ordenar el *Combo Parejas Con Sentido* (2 Mugs + 2 Llaveros de Cuero) en oferta por $36.500. ¿Cómo acordamos las imágenes para estampar?" target="_blank" class="w-gradient bg-stone-900 hover:bg-stone-800 text-white font-bold py-3.5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md">
                             <i class="fa-brands fa-whatsapp text-lg"></i>
                             Pedir Combo Enamora
                         </a>
                     </div>
                 </div>
 
-                <!-- Combo 3: Combo Emprendedor Eventos -->
+                <!-- 📦 TARJETA DEL COMBO 3 (Combo Corporativo) -->
                 <div class="bg-white rounded-3xl border border-stone-200/80 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between hover:border-indigo-500/40 group relative">
-                    <!-- Insignia de Descuento -->
                     <div class="absolute top-4 right-4 bg-indigo-600 text-white text-xs font-black px-3 py-1.5 rounded-full shadow-md z-10 animate-bounce">
                         Ahorras $13.500
                     </div>
                     
                     <div>
-                        <!-- Imagen representativa -->
+                        <!-- Foto del Combo -->
                         <div class="relative h-56 bg-stone-100 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1590005354167-6da97870c913?w=600&auto=format&fit=crop&q=80" alt="Combo Corporativo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -298,12 +322,12 @@
                             </div>
                         </div>
                         
-                        <!-- Información -->
+                        <!-- Textos descriptivos -->
                         <div class="p-6 sm:p-8 space-y-3">
                             <h3 class="text-xl font-bold text-stone-900 font-serif-title">Combo Corporativo & Eventos</h3>
                             <p class="text-xs text-stone-500 leading-relaxed">Haz que tu logotipo, evento familiar o campaña destaque con recordación en los detalles cotidianos.</p>
                             
-                            <!-- Lista de elementos del Combo -->
+                            <!-- Lista de cosas incluidas -->
                             <ul class="space-y-2 pt-2 border-t border-stone-100 text-xs text-stone-600">
                                 <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-indigo-500"></i> 1 Termo Deportivo de Aluminio 600ml</li>
                                 <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-indigo-500"></i> 10 Botones Metálicos de 55mm</li>
@@ -312,7 +336,7 @@
                         </div>
                     </div>
 
-                    <!-- Precios y Botón de Acción -->
+                    <!-- Precios e interacción -->
                     <div class="p-6 sm:p-8 pt-0 border-t border-stone-50 bg-stone-50/50">
                         <div class="flex items-end justify-between mb-4">
                             <div>
@@ -322,6 +346,7 @@
                             <span class="text-[10px] text-indigo-700 bg-indigo-50 px-2 py-1 rounded font-bold border border-indigo-100">Descuento -23%</span>
                         </div>
                         
+                        <!-- Mensaje WhatsApp -->
                         <a href="https://wa.me/573043518387?text=¡Hola personalizARTE! Me interesa el *Combo Corporativo y Eventos* (Termo + 10 Botones) de $45.500. Quisiera cotizar el estampado con el logo de mi marca." target="_blank" class="w-full bg-stone-900 hover:bg-stone-800 text-white font-bold py-3.5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md">
                             <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
                             Cotizar este Combo
@@ -331,7 +356,7 @@
 
             </div>
             
-            <!-- Banner informativo inferior -->
+            <!-- Banner informativo inferior para "Combo a Medida" -->
             <div class="mt-12 bg-white border border-stone-200 p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="flex items-center gap-4">
                     <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center shrink-0">
@@ -351,7 +376,10 @@
         </div>
     </section>
 
-    <!-- PROCESO DE PEDIDO PASO A PASO -->
+    <!-- =========================================================================================
+         📌 SECCIÓN 5: PROCESO DE COMPRA (PASO A PASO)
+         Aquí puedes cambiar el título y las descripciones de los pasos del 1 al 3.
+         ========================================================================================= -->
     <section id="proceso" class="bg-amber-50/40 py-16 border-y border-stone-200/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
@@ -389,7 +417,11 @@
         </div>
     </section>
 
-    <!-- SECCIÓN SIMULADOR VIRTUAL MEJORADO -->
+    <!-- =========================================================================================
+         📌 SECCIÓN 6: SIMULADOR VIRTUAL (PREVISUALIZADOR EN TIEMPO REAL)
+         Aquí NO debes tocar el diseño de las maquetas 3D para evitar descuadres. 
+         Solo puedes modificar los títulos explicativos, los textos del Paso 1, Paso 2 y el botón.
+         ========================================================================================= -->
     <section id="simulador" class="bg-stone-900 text-stone-100 py-16 sm:py-24 relative overflow-hidden">
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-rose-500/5 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -411,7 +443,8 @@
 
                     <!-- Tarjeta interactiva del panel de simulación -->
                     <div class="bg-stone-850 p-5 rounded-2xl border border-stone-800 space-y-5">
-                        <!-- Paso 1: Elegir plantilla -->
+                        
+                        <!-- Control de Paso 1: Elegir el tipo de producto -->
                         <div>
                             <label class="block text-xs font-bold uppercase text-amber-400 mb-2.5">Paso 1: Elige el producto a simular</label>
                             <div class="grid grid-cols-2 gap-2.5">
@@ -434,7 +467,7 @@
                             </div>
                         </div>
 
-                        <!-- Paso 2: Subida de archivo -->
+                        <!-- Control de Paso 2: Subida del archivo del cliente -->
                         <div>
                             <label class="block text-xs font-bold uppercase text-amber-400 mb-2.5">Paso 2: Carga tu foto preferida</label>
                             <label class="flex flex-col items-center justify-center border-2 border-dashed border-stone-700 hover:border-amber-500/50 bg-stone-900/40 rounded-xl p-4 cursor-pointer transition-colors group">
@@ -445,7 +478,7 @@
                             </label>
                         </div>
 
-                        <!-- Botón de cotización directa por WhatsApp -->
+                        <!-- Botón de acción del simulador -->
                         <button onclick="requestQuoteWithDesign()" class="w-full bg-gradient-to-r from-amber-500 to-rose-500 hover:from-amber-400 hover:to-rose-400 text-stone-950 font-bold py-3 rounded-xl transition-all shadow-lg text-xs sm:text-sm flex items-center justify-center gap-2">
                             <i class="fa-brands fa-whatsapp text-lg"></i>
                             Enviar este diseño por WhatsApp
@@ -453,38 +486,31 @@
                     </div>
                 </div>
 
-                <!-- Columna Derecha: El canvas/renderizador digital -->
+                <!-- Columna Derecha: Renderizador 3D (No tocar) -->
                 <div class="lg:col-span-7 flex justify-center py-4">
                     <div class="relative w-full max-w-[420px] aspect-square bg-stone-950 rounded-3xl border border-stone-850 flex items-center justify-center p-8 overflow-hidden shadow-2xl">
-                        <!-- Indicador decorativo -->
                         <div class="absolute top-4 left-4 flex items-center gap-1.5 text-xs text-stone-500">
                             <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
                             Vista Previa en Tiempo Real
                         </div>
 
-                        <!-- 1. VISTA PREVIA: MUG DE 11 ONZAS -->
+                        <!-- 1. MAQUETA: MUG -->
                         <div id="sim-view-mug" class="relative w-48 h-52 flex items-center justify-center">
-                            <!-- Asa del pocillo -->
                             <div class="absolute left-[-24px] w-12 h-32 border-[12px] border-stone-100 rounded-[35px] z-0 shadow-lg shadow-black/30"></div>
-                            <!-- Cuerpo del mug -->
                             <div class="w-full h-full bg-stone-50 rounded-3xl relative overflow-hidden z-10 flex items-center justify-center shadow-xl border border-stone-200/40">
-                                <!-- Área sublimable -->
                                 <div class="w-[80%] h-[75%] bg-white border border-dashed border-stone-300 flex items-center justify-center overflow-hidden rounded relative">
                                     <div id="sim-pic-mug" class="w-full h-full bg-cover bg-center opacity-40 transition-all flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=400&auto=format&fit=crop&q=80')">
                                         <span class="text-[9px] text-stone-400 text-center px-4 font-bold uppercase tracking-wider" id="txt-mug-p">Tu Diseño Aquí</span>
                                     </div>
-                                    <!-- Degradados de volumen cilíndrico -->
                                     <div class="absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-black/20 to-transparent pointer-events-none"></div>
                                     <div class="absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-black/20 to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 2. VISTA PREVIA: AGENDA / LIBRETA -->
+                        <!-- 2. MAQUETA: AGENDA -->
                         <div id="sim-view-agenda" class="hidden relative w-48 h-60 flex items-center justify-center">
-                            <!-- Portada de Agenda tipo Cuero/Pasta dura -->
                             <div class="w-full h-full bg-amber-900 rounded-r-2xl rounded-l-md shadow-2xl relative flex items-center justify-center p-3 border-r-4 border-amber-950">
-                                <!-- Lomo de espiral metálico decorativo -->
                                 <div class="absolute left-[-8px] top-4 bottom-4 w-3 flex flex-col justify-between py-1 z-20">
                                     <div class="w-4 h-2 bg-stone-400 rounded-full shadow"></div>
                                     <div class="w-4 h-2 bg-stone-400 rounded-full shadow"></div>
@@ -495,7 +521,6 @@
                                     <div class="w-4 h-2 bg-stone-400 rounded-full shadow"></div>
                                     <div class="w-4 h-2 bg-stone-400 rounded-full shadow"></div>
                                 </div>
-                                <!-- Portada Sublimable -->
                                 <div class="w-full h-full bg-stone-100 rounded-r-lg overflow-hidden relative shadow-inner flex items-center justify-center border border-stone-200">
                                     <div id="sim-pic-agenda" class="w-full h-full bg-cover bg-center opacity-40 transition-all flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=400&auto=format&fit=crop&q=80')">
                                         <span class="text-[9px] text-stone-500 text-center px-4 font-bold uppercase tracking-wider" id="txt-agenda-p">Tu Diseño Aquí</span>
@@ -505,32 +530,26 @@
                             </div>
                         </div>
 
-                        <!-- 3. VISTA PREVIA: RETABLO DE MADERA -->
+                        <!-- 3. MAQUETA: RETABLO -->
                         <div id="sim-view-retablo" class="hidden relative w-56 h-44 flex items-center justify-center">
-                            <!-- Retablo de madera de 9mm con borde rústico -->
                             <div class="w-full h-full bg-amber-950 p-2 shadow-2xl relative flex items-center justify-center border-b-4 border-amber-900 rounded-sm">
-                                <!-- Área de la foto estampa -->
                                 <div class="w-full h-full bg-stone-100 overflow-hidden relative border border-amber-900 flex items-center justify-center">
                                     <div id="sim-pic-retablo" class="w-full h-full bg-cover bg-center opacity-40 transition-all flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=400&auto=format&fit=crop&q=80')">
                                         <span class="text-[9px] text-stone-500 text-center px-4 font-bold uppercase tracking-wider" id="txt-retablo-p">Tu Diseño Aquí</span>
                                     </div>
-                                    <!-- Efecto textura madera superpuesto suavemente -->
                                     <div class="absolute inset-0 bg-stone-900/10 pointer-events-none mix-blend-color-burn"></div>
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 4. VISTA PREVIA: BOTÓN METÁLICO -->
+                        <!-- 4. MAQUETA: BOTÓN METÁLICO -->
                         <div id="sim-view-boton" class="hidden relative w-48 h-48 flex items-center justify-center">
-                            <!-- Pin metálico redondo con brillo y volumen -->
                             <div class="w-full h-full bg-stone-100 rounded-full p-1 shadow-2xl relative overflow-hidden flex items-center justify-center border-2 border-stone-200">
                                 <div class="w-full h-full rounded-full overflow-hidden relative flex items-center justify-center">
-                                    <!-- Foto del usuario -->
                                     <div id="sim-pic-boton" class="w-full h-full bg-cover bg-center opacity-40 transition-all flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=400&auto=format&fit=crop&q=80')">
                                         <span class="text-[9px] text-stone-500 text-center px-4 font-bold uppercase tracking-wider" id="txt-boton-p">Tu Diseño Aquí</span>
                                     </div>
-                                    <!-- Brillo metálico / efecto domo circular -->
                                     <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-white/70 pointer-events-none rounded-full"></div>
                                     <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/15 to-transparent pointer-events-none"></div>
                                 </div>
@@ -544,11 +563,15 @@
         </div>
     </section>
 
-    <!-- FOOTER & CONTACTO -->
+    <!-- =========================================================================================
+         📌 SECCIÓN 7: PIE DE PÁGINA (FOOTER & INFORMACIÓN DE CONTACTO)
+         Aquí puedes cambiar la descripción del pie de página, enlaces a redes, correos, tu número
+         de WhatsApp 3043518387, dirección física en Piedecuesta y horarios de atención.
+         ========================================================================================= -->
     <footer id="contacto" class="bg-stone-950 text-stone-300 pt-16 pb-8 border-t border-stone-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             
-            <!-- Columna de Marca -->
+            <!-- Columna de Marca y Redes Sociales -->
             <div class="space-y-4">
                 <span class="text-2xl font-bold font-serif-title text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-400 to-amber-200">
                     personalizARTE
@@ -556,6 +579,7 @@
                 <p class="text-xs text-stone-400 leading-relaxed max-w-sm">
                     Estudio de estampado y grabado artesanal. Fabricamos regalos personalizados, tazas especiales, papelería corporativa y detalles con recordación de marca en Piedecuesta, Santander.
                 </p>
+                <!-- Links de redes sociales -->
                 <div class="flex items-center gap-3 pt-2">
                     <a href="https://instagram.com" target="_blank" class="w-9 h-9 bg-stone-900 hover:bg-stone-800 rounded-xl flex items-center justify-center text-stone-200 hover:text-white transition-all">
                         <i class="fa-brands fa-instagram text-sm"></i>
@@ -569,7 +593,7 @@
                 </div>
             </div>
 
-            <!-- Columna FAQ Rápido -->
+            <!-- Columna de Preguntas Frecuentes -->
             <div>
                 <h4 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-5">Preguntas Frecuentes</h4>
                 <ul class="text-xs space-y-3.5 text-stone-400">
@@ -588,7 +612,7 @@
                 </ul>
             </div>
 
-            <!-- Columna Ubicación e Info -->
+            <!-- Columna Datos de Localización e Info de Horarios -->
             <div>
                 <h4 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-5">Ubicación y Canales</h4>
                 <ul class="text-xs space-y-3.5 text-stone-400">
@@ -623,44 +647,32 @@
         </div>
     </footer>
 
+    <!-- =========================================================================================
+         📌 SECCIÓN 8: ELEMENTOS OCULTOS DEL SISTEMA (MODAL DETALLES Y NOTIFICACIONES)
+         No debes realizar ediciones aquí ya que son contenedores del sistema controlados por código.
+         ========================================================================================= -->
     <!-- LIGHTBOX DETALLADO DEL PRODUCTO -->
     <div id="itemModal" class="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-white rounded-3xl overflow-hidden max-w-xl w-full relative shadow-2xl scale-95 transition-transform duration-300" id="itemModalContainer">
-            
-            <!-- Botón de salida -->
             <button onclick="closeModal()" class="absolute right-4 top-4 z-10 w-9 h-9 bg-black/50 hover:bg-black text-white rounded-full flex items-center justify-center transition-colors">
                 <i class="fa-solid fa-xmark text-sm"></i>
             </button>
-
-            <!-- Foto destacada -->
             <div class="relative h-64 sm:h-80 w-full bg-stone-50 overflow-hidden">
                 <img id="modalImg" src="" alt="" class="w-full h-full object-cover">
             </div>
-
-            <!-- Cuerpo Informativo -->
             <div class="p-6 sm:p-8 space-y-4">
                 <div class="flex items-center justify-between">
                     <span id="modalSecBadge" class="text-[10px] font-extrabold uppercase tracking-widest text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-100"></span>
                     <span id="modalVal" class="text-xl font-extrabold text-stone-900"></span>
                 </div>
-                
                 <h3 id="modalName" class="text-xl sm:text-2xl font-extrabold font-serif-title text-stone-900"></h3>
                 <p id="modalDesc" class="text-stone-600 text-xs sm:text-sm leading-relaxed"></p>
-
-                <!-- Especificaciones Rápidas -->
                 <div class="grid grid-cols-2 gap-3 bg-stone-50 p-3 rounded-xl border border-stone-100 text-[11px] text-stone-500">
-                    <div>
-                        <span class="font-bold text-stone-800">✓ Impresión:</span> Alta definición térmica
-                    </div>
-                    <div>
-                        <span class="font-bold text-stone-800">✓ Ajuste:</span> Maquetación gratuita
-                    </div>
+                    <div><span class="font-bold text-stone-800">✓ Impresión:</span> Alta definición térmica</div>
+                    <div><span class="font-bold text-stone-800">✓ Ajuste:</span> Maquetación gratuita</div>
                 </div>
-
-                <!-- Botón de Pedido por WhatsApp -->
                 <a id="modalSendWhatsApp" href="#" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-emerald-600/10 flex items-center justify-center gap-2.5 transition-all text-sm">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    Cotizar este modelo por WhatsApp
+                    <i class="fa-brands fa-whatsapp text-lg"></i>Cotizar este modelo por WhatsApp
                 </a>
             </div>
         </div>
@@ -672,153 +684,113 @@
         <span id="simToastText"></span>
     </div>
 
-    <!-- BASE DE DATOS LOCAL Y MOTOR JS -->
+    <!-- =========================================================================================
+         📌 SECCIÓN 9: BASE DE DATOS DE PRODUCTOS (CÓDIGO JAVASCRIPT)
+         Aquí tienes anotados exactamente cada uno de los 7 productos que seleccionaste.
+         - Para cambiar una foto: Sube la foto a tu GitHub y escribe el nombre del archivo (ej. "mug_pareja.jpg").
+         - Para cambiar el precio: Modifica el valor en 'price' (ej. "$16.500").
+         ========================================================================================= -->
     <script>
-        // Catálogo de Productos para personalizARTE en base a tus especificaciones exactas
         const productsDb = [
-            // --- MUGS 11 ONZAS ---
+            
+            // ☕ ARTÍCULO 1: MUGS DE 11 ONZAS (FOTO MUG CON PAREJA)
             {
                 id: 1,
-                title: "Mug de 11 oz Premium Cerámica Blanco",
+                title: "Mug de 11 oz Premium 'Momentos'",
                 section: "mugs",
                 sectionLabel: "☕ Mugs 11 Onzas",
                 price: "$14.000",
-                image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80",
-                description: "Nuestra taza estrella de 11 onzas. Cerámica importada de altísima blancura que permite colores vibrantes y nítidos en cada estampado. Apta para microondas."
+                // NOTA: Reemplaza este enlace por el nombre de tu foto en GitHub, por ejemplo: "mug_pareja.jpg"
+                image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&auto=format&fit=crop&q=80",
+                description: "Nuestra taza estrella de 11 onzas personalizada con una foto de pareja con un fondo estético de alta calidad. Cerámica de altísima blancura, colores nítidos y apta para microondas."
             },
+
+            // 📔 ARTÍCULO 2: AGENDAS PERSONALIZADAS (DESDE ARRIBA CON PORTADA DE PAREJA)
             {
                 id: 2,
-                title: "Mug Mágico de 11 oz Térmico",
-                section: "mugs",
-                sectionLabel: "☕ Mugs 11 Onzas",
-                price: "$19.500",
-                image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&auto=format&fit=crop&q=80",
-                description: "Taza térmica de cerámica negra de 11oz. Revela tu fotografía favorita al verter líquido caliente en su interior. Sorpresa garantizada para regalar."
+                title: "Agenda Personalizada de Pasta Dura",
+                section: "agendas",
+                sectionLabel: "📔 Agendas",
+                price: "$29.000",
+                // NOTA: Reemplaza este enlace por el nombre de tu foto en GitHub, por ejemplo: "agenda_pareja.jpg"
+                image: "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=600&auto=format&fit=crop&q=80",
+                description: "Fotografía tomada desde arriba que muestra una hermosa libreta o agenda de notas con la portada impresa con la foto de una pareja y fondo personalizado. Tapa dura mate con 80 hojas premium."
             },
+
+            // 🔘 ARTÍCULO 3: BOTÓN PERSONALIZADO (BOTÓN DE METAL DE 58mm CON LA MISMA PAREJA)
             {
                 id: 3,
-                title: "Mug de 11 oz Interior y Oreja de Color",
-                section: "mugs",
-                sectionLabel: "☕ Mugs 11 Onzas",
-                price: "$16.000",
-                image: "https://images.unsplash.com/photo-1539223470305-c84177e5b248?w=600&auto=format&fit=crop&q=80",
-                description: "Mug de cerámica con revestimiento interno y oreja en colores vivos (azul, rojo, rosado, verde). Combina el color de la taza con los tonos de tu diseño."
+                title: "Botón Metálico Personalizado de 58 mm",
+                section: "botones",
+                sectionLabel: "🔘 Botones",
+                price: "$4.000",
+                // NOTA: Reemplaza este enlace por el nombre de tu foto en GitHub, por ejemplo: "boton_pareja.jpg"
+                image: "https://images.unsplash.com/photo-1590005354167-6da97870c913?w=600&auto=format&fit=crop&q=80",
+                description: "Botón o pin de metal con broche de seguridad en tamaño de $58\text{ mm}$, estampado con la misma foto de la pareja sobre un fondo de diseño estilizado."
             },
 
-            // --- AGENDAS ---
+            // 🥤 ARTÍCULO 4: VASO VIAJERO (VASO DE PLÁSTICO VIAJERO CON LA FOTO DE LA PAREJA)
             {
                 id: 4,
-                title: "Agenda Ejecutiva A5 Pasta Dura",
-                section: "agendas",
-                sectionLabel: "📔 Agendas & Libretas",
-                price: "$29.000",
-                image: "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=600&auto=format&fit=crop&q=80",
-                description: "Agenda de tapa dura con laminado mate antirrayones. 80 hojas en papel bond premium de 90g. Personaliza la carátula con tu nombre, logotipo corporativo o frase motivacional."
+                title: "Vaso Viajero de Plástico Térmico",
+                section: "vasos",
+                sectionLabel: "🥤 Vasos Viajeros",
+                price: "$18.500",
+                // NOTA: Reemplaza este enlace por el nombre de tu foto en GitHub, por ejemplo: "vaso_pareja.jpg"
+                image: "https://images.unsplash.com/photo-1577937927133-66ef06acdf18?w=600&auto=format&fit=crop&q=80",
+                description: "Vaso de plástico de doble pared resistente con tapa hermética para llevar líquidos calientes o fríos, personalizado con la foto de la pareja con un fondo estético increíble."
             },
+
+            // 🐖 ARTÍCULO 5: ALCANCÍA PERSONALIZADA (DE MADERA, COLORES LLAMATIVOS, SIN FOTO DE PERSONAS)
             {
                 id: 5,
-                title: "Libreta de Apuntes Hojas de Papel Kraft",
-                section: "agendas",
-                sectionLabel: "📔 Agendas & Libretas",
+                title: "Alcancía de Madera Rústica 'Ahorros'",
+                section: "alcancias",
+                sectionLabel: "🐖 Alcancías",
                 price: "$22.000",
-                image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop&q=80",
-                description: "Libreta ecológica con espiral doble metálico. Contiene 100 hojas de papel kraft ideales para bocetos, bitácora de viaje o lettering."
+                // NOTA: Reemplaza este enlace por el nombre de tu foto en GitHub, por ejemplo: "alcancia_colores.jpg"
+                image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=600&auto=format&fit=crop&q=80",
+                description: "Alcancía de madera MDF con vidrio frontal decorativo. Sin fotos de personas, diseñada con colores sumamente llamativos, frases de motivación para el ahorro y un fondo muy colorido."
             },
 
-            // --- LLAVEROS ---
+            // 💐 ARTÍCULO 6: RAMOS DE FLORES ARTIFICIALES
             {
                 id: 6,
-                title: "Llavero de Cuero Natural con Grabado Láser",
-                section: "llaveros",
-                sectionLabel: "🔑 Llaveros",
-                price: "$9.000",
-                image: "https://images.unsplash.com/photo-1622560480654-d96214fdc887?w=600&auto=format&fit=crop&q=80",
-                description: "Llavero elegante fabricado en cuero curtido genuino. Grabado láser de alta fidelidad para iniciales, fechas importantes o logos empresariales."
+                title: "Ramo de Flores Artificiales Exclusivo",
+                section: "ramos",
+                sectionLabel: "💐 Ramos",
+                price: "$35.000",
+                // NOTA: Reemplaza este enlace por el nombre de tu foto en GitHub, por ejemplo: "ramo_flores.jpg"
+                image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=600&auto=format&fit=crop&q=80",
+                description: "Elegante arreglo floral elaborado con flores artificiales de apariencia sumamente natural y realista. Ideal para acompañar regalos, tazas o agendas de aniversarios."
             },
+
+            // 🖼️ ARTÍCULO 7: RETABLOS (MEDIDAS 30cm DE ALTO x 20cm DE ANCHO CON FOTO DE PAREJA)
             {
                 id: 7,
-                title: "Llavero de Acrílico Transparente Redondo",
-                section: "llaveros",
-                sectionLabel: "🔑 Llaveros",
-                price: "$6.500",
-                image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&auto=format&fit=crop&q=80",
-                description: "Llavero redondo de acrílico cristalino. Impresión a doble cara con sellado ultra brillante que protege de rayones y roces de llaves diarias."
-            },
-
-            // --- BOTONES ---
-            {
-                id: 8,
-                title: "Pines y Botones Metálicos de 55mm",
-                section: "botones",
-                sectionLabel: "🔘 Botones & Pines",
-                price: "$3.500",
-                image: "https://images.unsplash.com/photo-1590005354167-6da97870c913?w=600&auto=format&fit=crop&q=80",
-                description: "Botón con broche de seguridad para chaquetas, morrales o gorras. Diámetro estándar de 5.5cm. Ideal para eventos corporativos, campaigns o marcas independientes."
-            },
-            {
-                id: 9,
-                title: "Botón Destapador Imanado de Nevera",
-                section: "botones",
-                sectionLabel: "🔘 Botones & Pines",
-                price: "$5.000",
-                image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=600&auto=format&fit=crop&q=80",
-                description: "Doble función: Botón imán decorativo para la nevera y destapador metálico de botellas en la cara trasera. Impreso full color con acabado brillante."
-            },
-
-            // --- RETABLOS ---
-            {
-                id: 10,
-                title: "Retablo de Madera Flotante MDF 20x30",
+                title: "Retablo de Madera Flotante $30 \times 20\text{ cm}$",
                 section: "retablos",
-                sectionLabel: "🖼️ Retablos & Madera",
+                sectionLabel: "🖼️ Retablos",
                 price: "$26.000",
-                image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&auto=format&fit=crop&q=80",
-                description: "Fotografía impresa en papel de alto brillo y laminada para mayor durabilidad, montada en retablo de madera MDF de 9mm con borde negro pintado a mano."
-            },
-            {
-                id: 11,
-                title: "Retablo Tríptico de Mesa (Set de 3)",
-                section: "retablos",
-                sectionLabel: "🖼️ Retablos & Madera",
-                price: "$42.000",
-                image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=400&auto=format&fit=crop&q=80",
-                description: "Tres retablos pequeños de 10x15cm conectados entre sí, ideales para colocar en escritorios, repisas o mesas de noche con secuencias fotográficas."
-            },
-
-            // --- DETALLES ---
-            {
-                id: 12,
-                title: "Termo Deportivo de Aluminio 600ml",
-                section: "detalles",
-                sectionLabel: "🎁 Detalles",
-                price: "$24.000",
-                image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&auto=format&fit=crop&q=80",
-                description: "Termo ligero de aluminio con boquilla deportiva y mosquetón para colgar. Sublimación envolvente de gran definición para llevar al gimnasio."
-            },
-            {
-                id: 13,
-                title: "Rompecabezas Sublimado Personalizado",
-                section: "detalles",
-                sectionLabel: "🎁 Detalles",
-                price: "$18.000",
-                image: "https://images.unsplash.com/photo-1585155770447-2f66e2a397b5?w=600&auto=format&fit=crop&q=80",
-                description: "Divertido rompecabezas de cartón prensado con brillo para armar en pareja o familia. Se estampa la fotografía de tu elección. Incluye caja protectora."
+                // NOTA: Reemplaza este enlace por el nombre de tu foto en GitHub, por ejemplo: "retablo_pareja.jpg"
+                image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop&q=80",
+                description: "Fotografía de alta definición impresa y laminada con acabado mate de protección, montada sobre un retablo resistente de madera rústica de medidas $30\text{ cm de alto} \times 20\text{ cm de ancho}$ con la foto de la pareja."
             }
         ];
 
-        // Estados globales de navegación
+        // =========================================================================================
+        // 📌 LOGICA INTERNA DE LA PÁGINA (No editar para evitar fallos técnicos del sitio)
+        // =========================================================================================
         let activeSection = "todos";
         let searchString = "";
         let currentSimTemplate = "mug";
         let uploadedSimImgBase64 = null;
 
-        // Renderizador del catálogo
         function displayCatalog() {
             const grid = document.getElementById("catalogGrid");
             const noResults = document.getElementById("noProductsFound");
             grid.innerHTML = "";
 
-            // Filtro dinámico
             const filteredData = productsDb.filter(prod => {
                 const matchesSection = activeSection === "todos" || prod.section === activeSection;
                 const matchesSearch = prod.title.toLowerCase().includes(searchString.toLowerCase()) || 
@@ -826,7 +798,6 @@
                 return matchesSection && matchesSearch;
             });
 
-            // Control de vista sin resultados
             if (filteredData.length === 0) {
                 noResults.classList.remove("hidden");
                 grid.classList.add("hidden");
@@ -836,7 +807,6 @@
             noResults.classList.add("hidden");
             grid.classList.remove("hidden");
 
-            // Generar tarjetas HTML
             filteredData.forEach(p => {
                 const itemCard = document.createElement("div");
                 itemCard.className = "bg-white border border-stone-200/80 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-amber-500/30 transition-all duration-300 flex flex-col group cursor-pointer";
@@ -866,29 +836,22 @@
             });
         }
 
-        // Cambio de Pestañas de Categoría
         document.querySelectorAll(".cat-tab").forEach(tab => {
             tab.addEventListener("click", () => {
-                // Limpiar estados activos
                 document.querySelectorAll(".cat-tab").forEach(btn => {
                     btn.className = "cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all";
                 });
-
-                // Activar pestaña seleccionada
                 tab.className = "cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-stone-900 text-white shadow-md transition-all";
-                
                 activeSection = tab.getAttribute("data-sec");
                 displayCatalog();
             });
         });
 
-        // Entrada del Buscador
         document.getElementById("searchInput").addEventListener("input", (e) => {
             searchString = e.target.value;
             displayCatalog();
         });
 
-        // Apertura de modal con datos detallados
         const detailModal = document.getElementById("itemModal");
         const modalContainer = document.getElementById("itemModalContainer");
 
@@ -900,11 +863,9 @@
             document.getElementById("modalImg").src = product.image;
             document.getElementById("modalImg").alt = `Imagen de ${product.title}`;
 
-            // Configurar WhatsApp dinámico con tu número real
             const customMsg = `¡Hola personalizARTE! Me interesó mucho el producto: "${product.title}" de tu catálogo online (${product.price}). Quisiera cotizar el costo con mi diseño.`;
             document.getElementById("modalSendWhatsApp").href = `https://wa.me/573043518387?text=${encodeURIComponent(customMsg)}`;
 
-            // Animación de entrada
             detailModal.classList.remove("opacity-0", "pointer-events-none");
             setTimeout(() => {
                 modalContainer.classList.remove("scale-95");
@@ -920,34 +881,25 @@
             }, 150);
         }
 
-        // Cierre al dar click afuera de la caja blanca
         detailModal.addEventListener("click", (e) => {
             if (e.target === detailModal) closeModal();
         });
 
-        // Motor del Simulador Virtual
         function changeSimTemplate(type) {
             currentSimTemplate = type;
-
-            // Restablecer estilos de botones
             document.querySelectorAll(".sim-pill").forEach(pill => {
                 pill.className = "sim-pill p-3 bg-stone-900 border-2 border-transparent text-stone-400 hover:text-stone-200 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all";
             });
-
-            // Activar el botón correcto
             document.getElementById(`sim-btn-${type}`).className = "sim-pill p-3 bg-stone-850 border-2 border-amber-500 text-amber-400 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all";
 
-            // Ocultar vistas anteriores
             document.getElementById("sim-view-mug").classList.add("hidden");
             document.getElementById("sim-view-agenda").classList.add("hidden");
             document.getElementById("sim-view-retablo").classList.add("hidden");
             document.getElementById("sim-view-boton").classList.add("hidden");
 
-            // Mostrar vista actual
             document.getElementById(`sim-view-${type}`).classList.remove("hidden");
         }
 
-        // Carga de archivo y conversión a Base64 para visualización
         function loadSimImage(event) {
             const input = event.target;
             if (input.files && input.files[0]) {
@@ -956,7 +908,6 @@
                     uploadedSimImgBase64 = e.target.result;
                     const urlVal = `url('${uploadedSimImgBase64}')`;
 
-                    // Asignar fondo a todas las previsualizaciones
                     document.getElementById("sim-pic-mug").style.backgroundImage = urlVal;
                     document.getElementById("sim-pic-mug").style.opacity = "1";
                     document.getElementById("txt-mug-p").style.display = "none";
@@ -980,7 +931,6 @@
             }
         }
 
-        // Cotización del simulador por WhatsApp con tu número real
         function requestQuoteWithDesign() {
             if (!uploadedSimImgBase64) {
                 triggerToast("Carga una foto primero para poder simular.");
@@ -996,7 +946,6 @@
             window.open(`https://wa.me/573043518387?text=${encodeURIComponent(sendMsg)}`, "_blank");
         }
 
-        // Activación de notificaciones flotantes (Toast)
         function triggerToast(text) {
             const toast = document.getElementById("simToast");
             const toastText = document.getElementById("simToastText");
@@ -1011,7 +960,6 @@
             }, 3000);
         }
 
-        // Disparo en carga de página
         window.onload = function() {
             displayCatalog();
         };
