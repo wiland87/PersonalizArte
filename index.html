@@ -1,236 +1,270 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+```html
 <!DOCTYPE html>
-<html xmlns='http://w3.org' xmlns:b='http://google.com' xmlns:data='http://google.com' xmlns:expr='http://google.com'>
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset='utf-8'/>
-  <meta content='width=device-width,initial-scale=1' name='viewport'/>
-  
-  <b:if cond='data:blog.pageType == &quot;index&quot;'>
-    <title><data:blog.title/></title>
-  <b:else/>
-    <title><data:blog.pageName/> | <data:blog.title/></title>
-  </b:if>
-
-  <b:skin><![CDATA[
-    /* 1. RESET Y BASE */
-    * { box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f6f8;
-      color: #333333;
-    }
-    a { text-decoration: none; color: inherit; }
-
-    /* 2. HEADER Y BANNER */
-    .site-header {
-      background-color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      width: 100%;
-      padding: 25px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .brand-logo {
-      height: 85px;
-      width: auto;
-      display: block;
-      object-fit: contain;
-    }
-
-    /* 3. ESTRUCTURA PRINCIPAL (WEB LAYOUT) */
-    .main-wrapper {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-    @media (min-width: 900px) {
-      .main-wrapper {
-        grid-template-columns: 2fr 1fr; /* Zona de artículos (izquierda) y Sidebar (derecha) */
-      }
-    }
-
-    /* 4. REJILLA DE ARTÍCULOS (GRID) */
-    .posts-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 25px;
-    }
-    @media (min-width: 600px) {
-      .posts-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-      }
-    }
-
-    /* 5. TARJETAS DE ARTÍCULOS */
-    .post-card {
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .post-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    }
-    .post-content {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-    .post-title {
-      font-size: 1.3rem;
-      margin: 0 0 12px 0;
-      color: #111111;
-      line-height: 1.4;
-    }
-    .post-title a:hover { color: #0066cc; }
-    .post-snippet {
-      font-size: 0.95rem;
-      color: #666666;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      flex-grow: 1;
-    }
-    .post-meta {
-      font-size: 0.8rem;
-      color: #999999;
-      border-top: 1px solid #eeeeee;
-      padding-top: 12px;
-    }
-
-    /* 6. BARRA LATERAL (SIDEBAR) */
-    .sidebar-panel {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-    .widget-box {
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    }
-    .widget-box h3 {
-      margin: 0 0 15px 0;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-bottom: 2px solid #0066cc;
-      padding-bottom: 8px;
-    }
-
-    /* 7. PIE DE PÁGINA (FOOTER) */
-    .site-footer {
-      background-color: #111111;
-      color: #ffffff;
-      padding: 40px 0;
-      margin-top: 60px;
-      font-size: 0.9rem;
-    }
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-    @media (min-width: 600px) {
-      .footer-container {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-  ]]></b:skin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalizARTE - Tu Tienda de Regalos y Personalizados</title>
+    <!-- Tailwind CSS para diseño fluido y ultra moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para iconos artísticos de alta calidad -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fdfcfb;
+        }
+        .font-serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-nav {
+            background: rgba(253, 252, 251, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        /* Ocultar barra de desplazamiento en los filtros móviles */
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-none {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
-<body>
+<body class="text-stone-800 selection:bg-amber-200 selection:text-stone-900">
 
-  <!-- BANNER PRINCIPAL -->
-  <header class='site-header'>
-    <div class='header-container'>
-      <a class='logo-link' expr:href='data:blog.homepageUrl'>
-        <img alt='Logo de la Marca' class='brand-logo' src='TU_URL_DE_IMAGEN_AQUÍ'/>
-      </a>
-    </div>
-  </header>
-
-  <!-- CONTENEDOR WEB DE CONTENIDO -->
-  <div class='main-wrapper'>
-    
-    <!-- COLUMNA IZQUIERDA: ARTÍCULOS -->
-    <main class='content-area'>
-      <b:section id='main-content' showaddelement='yes'>
-        <b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog'>
-          <b:includable id='main'>
+    <!-- =========================================================================
+         📌 SECCIÓN 1: BARRA DE NAVEGACIÓN Y CABECERA (LOGO Y TÍTULO GIGANTE)
+         =========================================================================
+         Aquí puedes cambiar la altura del menú o reorganizar los enlaces superiores.
+    -->
+    <header class="sticky top-0 z-40 w-full glass-nav border-b border-stone-200/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between">
             
-            <div class='posts-grid'>
-              <!-- Bucle dinámico que genera las tarjetas de tus artículos -->
-              <b:loop values='data:posts' var='post'>
-                <article class='post-card'>
-                  <div class='post-content'>
-                    <h2 class='post-title'>
-                      <a expr:href='data:post.url'><data:post.title/></a>
-                    </h2>
-                    <div class='post-snippet'>
-                      <!-- Muestra un resumen del texto del artículo automáticamente -->
-                      <data:post.snippet/>
+            <!-- Logo Grande y Título con Énfasis en "ARTE" -->
+            <div class="flex items-center gap-4">
+                <!-- LOGO REDISEÑADO: Más grande (w-16 h-16 móvil, w-20 h-20 en escritorio) con borde de relieve dorado -->
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shadow-lg border-2 border-amber-500 bg-white flex items-center justify-center shrink-0 transition-transform hover:scale-105 duration-300">
+                    <img src="logo.jpg" alt="Logo personalizARTE" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-tr from-amber-500 via-rose-500 to-indigo-600 flex items-center justify-center text-white\'><i class=\'fa-solid fa-wand-magic-sparkles text-2xl animate-pulse\'></i></div>';">
+                </div>
+                <!-- TEXTO DEL LOGO: "ARTE" destaca de forma monumental -->
+                <div>
+                    <div class="flex items-baseline flex-wrap">
+                        <span class="text-lg sm:text-xl font-medium tracking-tight font-serif-title text-stone-500 italic">personaliz</span>
+                        <span class="text-4xl sm:text-5xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 font-sans ml-1 drop-shadow-sm select-none">ARTE</span>
                     </div>
-                    <div class='post-meta'>
-                      <span><data:post.dateHeader/></span>
-                    </div>
-                  </div>
-                </article>
-              </b:loop>
+                    <p class="text-[10px] uppercase tracking-widest text-stone-500 mt-0.5 font-bold">Detalles con Sentido</p>
+                </div>
             </div>
+            
+            <!-- Enlaces de Navegación (Se ocultan en móvil y se ven en tablet/PC) -->
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-stone-600">
+                <a href="#catalogo" class="hover:text-amber-600 transition-colors">Catálogo</a>
+                <a href="#combos" class="hover:text-rose-600 transition-colors flex items-center gap-1">
+                    Combos Especiales
+                    <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+                </a>
+                <a href="#simulador" class="hover:text-amber-600 transition-colors bg-amber-50 px-3 py-1.5 rounded-lg border border-amber-200 text-amber-800">
+                    <i class="fa-solid fa-cubes mr-1.5"></i>Simulador Virtual
+                </a>
+                <a href="#proceso" class="hover:text-amber-600 transition-colors">¿Cómo pedir?</a>
+                <a href="#contacto" class="hover:text-amber-600 transition-colors">Contacto</a>
+            </nav>
 
-          </b:includable>
-        </b:widget>
-      </b:section>
+            <!-- Botón de Acción Principal de WhatsApp -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/573043518387" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-xl shadow-lg shadow-emerald-600/10 flex items-center gap-2 transition-all hover:scale-105 active:scale-95">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="hidden sm:inline">WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         📌 SECCIÓN 2: BANNER PRINCIPAL (HERO)
+         =========================================================================
+         Aquí puedes editar los textos de bienvenida de la página.
+    -->
+    <section class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-amber-50/40 via-white to-transparent">
+        <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-70"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block bg-rose-50 text-rose-700 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4 border border-rose-100">
+                🎨 Regalos Exclusivos Para Parejas & Fechas Especiales
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold font-serif-title text-stone-900 tracking-tight leading-none mb-6">
+                Tus historias de amor,<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600">plasmadas con pasión.</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-stone-600 text-base sm:text-lg mb-10 leading-relaxed">
+                Descubre nuestra colección especial de Mugs, Agendas, Botones Metálicos, Vasos Viajeros, Alcancías rústicas, Ramos de Flores y Retablos de alta calidad. Diseños personalizados perfectos para emocionar.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#catalogo" class="w-full sm:w-auto px-8 py-3.5 bg-stone-900 hover:bg-stone-800 text-white font-semibold rounded-xl transition-all shadow-xl shadow-stone-900/10 hover:shadow-stone-900/20 text-center">
+                    Explorar Catálogo
+                </a>
+                <a href="#simulador" class="w-full sm:w-auto px-8 py-3.5 bg-white hover:bg-stone-50 text-stone-800 font-semibold rounded-xl border border-stone-200 transition-all text-center flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-wand-magic-sparkles text-amber-500 animate-spin-slow"></i>
+                    Probar en el Simulador
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         📌 SECCIÓN 3: CATÁLOGO DE PRODUCTOS (GRID & FILTROS)
+         =========================================================================
+         El catálogo se dibuja automáticamente usando la base de datos de abajo (Sección 9 en JavaScript).
+         Solo debes tocar esta sección si deseas cambiar la estructura de búsqueda de la interfaz.
+    -->
+    <main id="catalogo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Buscador y Títulos -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-stone-200 pb-8">
+            <div>
+                <h2 class="text-3xl font-extrabold font-serif-title text-stone-900">Nuestros Productos</h2>
+                <p class="text-stone-500 text-sm mt-1">Navega por nuestra selección exclusiva de regalos personalizados</p>
+            </div>
+            
+            <!-- Caja de búsqueda interactiva -->
+            <div class="relative w-full md:w-80">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-stone-400"></i>
+                <input type="text" id="searchInput" placeholder="Buscar mug, agenda, retablo..." class="w-full pl-10 pr-4 py-2.5 bg-white border border-stone-200 rounded-xl text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all">
+            </div>
+        </div>
+
+        <!-- Pestañas de Categorías para filtrar -->
+        <div class="flex overflow-x-auto pb-4 mb-10 -mx-4 px-4 scrollbar-none gap-2" id="categoriesTabs">
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-stone-900 text-white shadow-md transition-all" data-sec="todos">
+                🌟 Mostrar Todo
+            </button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="mugs">
+                ☕ Mugs 11 Oz
+            </button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="agendas">
+                📔 Agendas
+            </button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="botones">
+                🔘 Botones
+            </button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="vasos">
+                🥤 Vasos Viajeros
+            </button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="alcancias">
+                🐷 Alcancías
+            </button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="ramos">
+                💐 Ramos Artificiales
+            </button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="retablos">
+                🖼️ Retablos
+            </button>
+        </div>
+
+        <!-- Contenedor Grid Principal de Productos -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="catalogGrid">
+            <!-- Cargado de forma dinámica con JS -->
+        </div>
+
+        <!-- Sin Resultados -->
+        <div id="noProductsFound" class="hidden text-center py-20 bg-stone-50 rounded-3xl border border-dashed border-stone-200">
+            <div class="w-16 h-16 bg-white shadow-sm text-stone-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-folder-open text-xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-stone-800">No encontramos coincidencias</h3>
+            <p class="text-stone-500 text-sm mt-1">Prueba con otra palabra o selecciona "Mostrar Todo"</p>
+        </div>
     </main>
 
-    <!-- COLUMNA DERECHA: SIDEBAR DE BIENVENIDA O PUBLICIDAD -->
-    <aside class='sidebar-panel'>
-      <b:section id='sidebar-widgets' showaddelement='yes'>
-        <!-- Aquí puedes arrastrar widgets desde el panel de Blogger fácilmente -->
-        <div class='widget-box'>
-          <h3>Sobre la Marca</h3>
-          <p>Bienvenido a nuestro espacio de artículos. Aquí mostramos nuestros trabajos y proyectos de personalización con diseño limpio.</p>
-        </div>
-      </b:section>
-    </aside>
+    <!-- =========================================================================
+         📌 SECCIÓN 4: COMBOS ESPECIALES (PROMOCIONES Y DESCUENTOS)
+         =========================================================================
+         Aquí puedes cambiar las fotos, los títulos, los precios y los textos de los combos.
+    -->
+    <section id="combos" class="bg-gradient-to-r from-stone-900 via-neutral-900 to-indigo-950 text-white py-20 relative overflow-hidden">
+        <!-- Luces de fondo decorativas -->
+        <div class="absolute top-0 right-0 w-[450px] h-[450px] bg-rose-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[450px] h-[450px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-  </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Encabezado de la Sección de Combos -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full inline-block">
+                    💥 Super Promociones de Temporada
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-serif-title mt-4 tracking-tight text-white leading-none">
+                    Ahorra Más con Nuestros Combos de Amor
+                </h2>
+                <p class="text-stone-300 text-sm sm:text-base mt-4 leading-relaxed">
+                    Diseñamos conjuntos hermosos para que sorprendas a esa persona favorita con varios artículos combinados a un precio súper especial con descuento ya aplicado.
+                </p>
+            </div>
 
-  <!-- PIE DE PÁGINA CORPORATIVO -->
-  <footer class='site-footer'>
-    <div class='footer-container'>
-      <div class='copyright'>
-        &#169; <data:blog.title/> - Todos los derechos reservados.
-      </div>
-      <div class='footer-credits'>
-        Creado desde cero a código limpio.
-      </div>
-    </div>
-  </footer>
+            <!-- Listado de Tarjetas de Combos -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- COMBO 1: Ejecutivo Pro -->
+                <div class="bg-stone-850/90 rounded-3xl p-6 border border-stone-800 flex flex-col justify-between hover:border-amber-500/40 transition-all hover:scale-[1.02] duration-300 group">
+                    <div>
+                        <!-- Imagen representativa -->
+                        <div class="relative h-48 w-full overflow-hidden rounded-2xl bg-stone-950 mb-5">
+                            <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=600&auto=format&fit=crop&q=80" alt="Combo Ejecutivo Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-amber-500 text-stone-950 text-[10px] font-black uppercase px-2.5 py-1 rounded-full">AHORRAS $8.100</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Combo Ejecutivo "Amor & Oficina"</h3>
+                        <p class="text-stone-400 text-xs leading-relaxed mb-4">
+                            Llévate 1 Mug de 11oz Premium para sus cafés de la mañana + 1 Agenda con tapa dura para que anote sus metas y proyectos juntos. Ambos estampados con la misma fotografía.
+                        </p>
+                        <!-- Lista de contenidos -->
+                        <ul class="text-stone-300 text-xs space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> 1 Mug de 11 oz Cerámica Blanco</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> 1 Agenda Ejecutiva Pasta Dura</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Ajuste e ilustración de fondo gratis</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-end justify-between border-t border-stone-800 pt-4 mb-4">
+                            <div>
+                                <span class="text-stone-500 text-[10px] line-through block">$43.000 COP</span>
+                                <span class="text-2xl font-black text-amber-400">$34.900 COP</span>
+                            </div>
+                            <span class="text-[10px] bg-amber-500/10 text-amber-400 px-2 py-1 rounded font-bold border border-amber-500/20">Descuento -18%</span>
+                        </div>
+                        <a href="https://wa.me/573043518387?text=Hola%20personalizARTE,%20estoy%20interesado%20en%20el%20Combo%20Ejecutivo%20Amor%20y%20Oficina%20de%20$34.900.%20Quiero%20saber%20cómo%20enviarles%20las%20fotos." target="_blank" class="w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-3 px-4 rounded-xl text-center text-xs flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Pedir Combo por WhatsApp
+                        </a>
+                    </div>
+                </div>
 
-</body>
-</html>
+                <!-- COMBO 2: Parejas Eterno -->
+                <div class="bg-stone-850/90 rounded-3xl p-6 border-2 border-rose-500/50 flex flex-col justify-between hover:border-rose-500 transition-all hover:scale-[1.02] duration-300 group relative">
+                    <span class="absolute -top-3.5 right-6 bg-gradient-to-r from-rose-500 to-amber-500 text-white text-[10px] font-black uppercase px-3 py-1.5 rounded-full shadow-lg">MÁS VENDIDO 💖</span>
+                    <div>
+                        <!-- Imagen representativa -->
+                        <div class="relative h-48 w-full overflow-hidden rounded-2xl bg-stone-950 mb-5">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&auto=format&fit=crop&q=80" alt="Combo Parejas Eterno" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-rose-500 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">AHORRAS $11.100</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Combo Parejas "Con Sentido"</h3>
+                        <p class="text-stone-400 text-xs leading-relaxed mb-4">
+                            El regalo perfecto de aniversario. Dos hermosos Mugs de 11oz personalizados que se complementan visualmente + Dos llaveros de cuero natural grabados con sus nombres e iniciales.
+                        </p>
+                        <!-- Lista de contenidos -->
+                        <ul class="text-stone-300 text-xs space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-rose-500 mr-2"></i> 2 Mugs 11 oz Premium (Diseños espejo)</li>
+                            <li><i class="fa-solid fa-check text-rose-500 mr-2"></i> 2 Llaveros de Cuero Genuino Grabados</li>
+                            <li><i class="fa-solid fa-check text-rose-500 mr-2"></i> Caja decorativa y tarjeta de regalo gratis</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-end justify-between border-t border-stone-800 pt-4 mb-4">
+                            <div>
+                                <span class="text-stone-500 text-[10px] line-through block">$46.000 COP</span>
+                                <span class="text-2xl font-black text-rose-400">$34.900 COP</span>
+                            </div>
+                            <span class="text-[10px] bg-rose-500/10 text-rose-400 px-2 py-1 rounded font-bold border border-rose-500/20">Descuento -24%</span>
+                        </div>
+                        <a href="https://wa.me/573043518387?text=Hola%20personalizARTE,%20quiero%20el%20Combo%20Parejas%20Con%20Sentido%20de%20$34.900.%20Quiero%20enviarles%20nuestros%20nombres%20y%20fotos." target="_blank" class="w-ful
