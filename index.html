@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalizARTE - Tu Tienda de Regalos y Personalizados</title>
+    
+    <meta name="description" content="personalizARTE: Estudio de estampado y regalos personalizados en Piedecuesta, Santander. Mugs, agendas, retablos y combos especiales.">
+    <meta name="keywords" content="regalos personalizados, mugs, agendas, piedecuesta, santander, retablos, estampados">
+    <meta property="og:title" content="personalizARTE - Detalles con Sentido">
+    <meta property="og:description" content="Crea tu regalo perfecto con nuestro simulador 3D. Envíos a todo el país.">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fdfcfb;
+        }
+
+        .font-serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass-nav {
+            background: rgba(253, 252, 251, 0.85);
+            backdrop-filter: blur(12px);
+        }
+
+        /* Ocultar barra de desplazamiento en los filtros móviles */
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-none {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="text-stone-800 selection:bg-amber-200 selection:text-stone-900">
+
+    <header class="sticky top-0 z-40 w-full glass-nav border-b border-stone-200/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shadow-lg border-2 border-amber-500 bg-white flex items-center justify-center shrink-0 transition-transform hover:scale-105 duration-300">
+                    <img src="logo.jpg" alt="Logo personalizARTE" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-tr from-amber-500 via-rose-500 to-indigo-600 flex items-center justify-center text-white\'><i class=\'fa-solid fa-wand-magic-sparkles text-2xl animate-pulse\'></i></div>';">
+                </div>
+                <div>
+                    <div class="flex items-baseline flex-wrap">
+                        <span class="text-lg sm:text-xl font-medium tracking-tight font-serif-title text-stone-500 italic">personaliz</span>
+                        <span class="text-4xl sm:text-5xl font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 font-sans ml-1 drop-shadow-sm select-none">ARTE</span>
+                    </div>
+                    <p class="text-[10px] uppercase tracking-widest text-stone-500 mt-0.5 font-bold">Detalles con Sentido</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-stone-600">
+                <a href="#catalogo" class="hover:text-amber-600 transition-colors">Catálogo</a>
+                <a href="#combos" class="hover:text-rose-600 transition-colors flex items-center gap-1">
+                    Combos Especiales
+                    <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+                </a>
+                <a href="#simulador" class="hover:text-amber-600 transition-colors bg-amber-50 px-3 py-1.5 rounded-lg border border-amber-200 text-amber-800">
+                    <i class="fa-solid fa-cubes mr-1.5"></i>Simulador Virtual
+                </a>
+                <a href="#proceso" class="hover:text-amber-600 transition-colors">¿Cómo pedir?</a>
+                <a href="#contacto" class="hover:text-amber-600 transition-colors">Contacto</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/573043518387" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs md:text-sm font-bold px-4 py-2.5 rounded-xl shadow-lg shadow-emerald-600/10 flex items-center gap-2 transition-all hover:scale-105 active:scale-95">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="hidden sm:inline">WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-amber-50/40 via-white to-transparent">
+        <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-70"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block bg-rose-50 text-rose-700 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4 border border-rose-100">
+                🎨 Regalos Exclusivos Para Parejas & Fechas Especiales
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold font-serif-title text-stone-900 tracking-tight leading-none mb-6">
+                Tus historias de amor,<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600">plasmadas con pasión.</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-stone-600 text-base sm:text-lg mb-10 leading-relaxed">
+                Descubre nuestra colección especial de Mugs, Agendas, Botones Metálicos, Vasos Viajeros, Alcancías, Ramos de Flores artificiales y Retablos de alta calidad. Diseños personalizados perfectos para emocionar.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#catalogo" class="w-full sm:w-auto px-8 py-3.5 bg-stone-900 hover:bg-stone-800 text-white font-semibold rounded-xl transition-all shadow-xl shadow-stone-900/10 hover:shadow-stone-900/20 text-center">
+                    Explorar Catálogo
+                </a>
+                <a href="#simulador" class="w-full sm:w-auto px-8 py-3.5 bg-white hover:bg-stone-50 text-stone-800 font-semibold rounded-xl border border-stone-200 transition-all text-center flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-wand-magic-sparkles text-amber-500 animate-spin-slow"></i>
+                    Probar en el Simulador
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main id="catalogo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-stone-200 pb-8">
+            <div>
+                <h2 class="text-3xl font-extrabold font-serif-title text-stone-900">Nuestros Productos</h2>
+                <p class="text-stone-500 text-sm mt-1">Navega por nuestro portafolio de regalos personalizados</p>
+            </div>
+            
+            <div class="relative w-full md:w-80">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-stone-400"></i>
+                <input type="text" id="searchInput" placeholder="Buscar mug, agenda, retablo..." class="w-full pl-10 pr-4 py-2.5 bg-white border border-stone-200 rounded-xl text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all">
+            </div>
+        </div>
+
+        <div class="flex overflow-x-auto pb-4 mb-10 -mx-4 px-4 scrollbar-none gap-2" id="categoriesTabs">
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-stone-900 text-white shadow-md transition-all" data-sec="todos">🌟 Mostrar Todo</button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="mugs">☕ Mugs 11 Oz</button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="agendas">📔 Agendas</button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="botones">🔘 Botones</button>
+            <button class="cat-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-white text-stone-600 hover:bg-stone-100 border border-stone-200 transition-all" data-sec="vasos">🥤 Vasos Viajeros</button>
+            <button class="cat-tab px-5
 
