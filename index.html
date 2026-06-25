@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>personalizARTE - Detalles con Sentido</title>
     
-    <!-- CONFIGURACIÓN DE ESTILOS Y FUENTES -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -19,7 +18,7 @@
 <body class="text-stone-800">
 
     <!-- =============================================
-       1. NAVEGACIÓN (HEADER)
+       1. NAVEGACIÓN (HEADER) - LÍNEA 20
     ============================================== -->
     <header class="sticky top-0 z-50 w-full glass-nav border-b border-stone-200/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -27,14 +26,18 @@
                 <div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-amber-500 shadow-sm bg-white">
                     <img src="logo.jpg" alt="Logo" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=P+A&background=f59e0b&color=fff'">
                 </div>
-                <span class="text-2xl font-black tracking-tighter text-stone-900 font-serif-title uppercase">personalizARTE</span>
+                <!-- LOGO CON DEGRADADO PLATEADO (Línea 27) -->
+                <div class="flex items-baseline">
+                    <span class="text-sm sm:text-base font-medium tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 uppercase">personaliz</span>
+                    <span class="text-2xl sm:text-4xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 uppercase ml-0.5 font-serif-title">ARTE</span>
+                </div>
             </div>
             <nav class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-stone-600">
                 <a href="#catalogo" class="hover:text-amber-600 transition-colors">Catálogo</a>
                 <a href="#combos" class="hover:text-rose-600 transition-colors">Combos</a>
                 <a href="#simulador" class="hover:text-indigo-600 transition-colors">Simulador</a>
             </nav>
-            <a href="https://wa.me/573043518387" target="_blank" class="bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:bg-emerald-500 transition-all shadow-lg shadow-emerald-600/20">
+            <a href="https://wa.me/573043518387" target="_blank" class="bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:bg-emerald-500 transition-all shadow-lg">
                 <i class="fa-brands fa-whatsapp"></i> <span class="hidden sm:inline">WhatsApp</span>
             </a>
         </div>
@@ -44,7 +47,7 @@
        2. HERO SECCIÓN
     ============================================== -->
     <section class="py-16 lg:py-24 bg-gradient-to-b from-amber-50/50 to-transparent text-center px-4">
-        <span class="inline-block bg-rose-50 text-rose-700 text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6 border border-rose-100">🎨 Regalos con alma desde Piedecuesta</span>
+        <span class="inline-block bg-rose-50 text-rose-700 text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6 border border-rose-100">🎨 Piedecuesta, Santander</span>
         <h1 class="text-4xl sm:text-6xl font-extrabold font-serif-title text-stone-900 leading-tight mb-6">Tus mejores momentos,<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-rose-600">hechos arte.</span></h1>
         <p class="max-w-2xl mx-auto text-stone-600 text-base mb-10">Explora nuestra colección de detalles personalizados. Calidad premium en cada estampado.</p>
         <div class="flex flex-wrap justify-center gap-4">
@@ -54,77 +57,52 @@
     </section>
 
     <!-- =============================================
-       3. CATÁLOGO DE PRODUCTOS (DINÁMICO)
+       3. CATÁLOGO DE PRODUCTOS
     ============================================== -->
     <main id="catalogo" class="max-w-7xl mx-auto px-4 py-12">
         <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
             <div>
-                <h2 class="text-3xl font-black font-serif-title text-stone-900">Catálogo de Productos</h2>
-                <p class="text-stone-500 text-sm mt-1">Personalizamos cada detalle a tu gusto</p>
+                <h2 class="text-3xl font-black font-serif-title text-stone-900">Nuestro Catálogo</h2>
+                <p class="text-stone-500 text-sm mt-1">Regalos 100% personalizados</p>
             </div>
             <div class="relative w-full md:w-80">
                 <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-stone-400"></i>
-                <input type="text" id="searchInput" placeholder="Buscar producto..." class="w-full pl-11 pr-4 py-3 bg-white border border-stone-200 rounded-2xl focus:ring-2 focus:ring-amber-500/20 outline-none">
+                <input type="text" id="searchInput" placeholder="Buscar..." class="w-full pl-11 pr-4 py-3 bg-white border border-stone-200 rounded-2xl focus:ring-2 focus:ring-amber-500/20 outline-none">
             </div>
         </div>
 
-        <!-- Filtros por Categoría -->
         <div class="flex overflow-x-auto pb-6 mb-10 scrollbar-none gap-3" id="categoriesTabs">
-            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-stone-900 text-white shadow-lg transition-all" data-sec="todos">🌟 Todos</button>
-            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600 hover:bg-stone-50 transition-all" data-sec="agendas">📔 Agendas</button>
-            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600 hover:bg-stone-50 transition-all" data-sec="vasos">🥤 Vasos</button>
-            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600 hover:bg-stone-50 transition-all" data-sec="ramos">💐 Ramos</button>
-            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600 hover:bg-stone-50 transition-all" data-sec="mugs">☕ Mugs</button>
+            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-stone-900 text-white shadow-lg" data-sec="todos">🌟 Todos</button>
+            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600" data-sec="agendas">📔 Agendas</button>
+            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600" data-sec="vasos">🥤 Vasos</button>
+            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600" data-sec="ramos">💐 Ramos</button>
+            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600" data-sec="mugs">☕ Mugs</button>
         </div>
 
-        <!-- Rejilla de Productos -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="catalogGrid">
-            <!-- Cargado por JavaScript -->
-        </div>
-
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="catalogGrid"></div>
         <div id="noProductsFound" class="hidden text-center py-20 bg-stone-50 rounded-3xl border-2 border-dashed border-stone-200">
-            <p class="text-stone-400 font-bold">No encontramos lo que buscas. Intenta con otra palabra.</p>
+            <p class="text-stone-400 font-bold">No se encontraron productos.</p>
         </div>
     </main>
 
     <!-- =============================================
-       4. SECCIÓN DE COMBOS (PROMOCIONES)
+       4. SECCIÓN DE COMBOS
     ============================================== -->
     <section id="combos" class="bg-stone-900 py-24">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16 text-white">
-                <h2 class="text-4xl font-black font-serif-title mb-4">Combos en Oferta</h2>
-                <p class="text-stone-400 max-w-xl mx-auto">Ahorra llevando nuestros kits personalizados más populares.</p>
-            </div>
-
+            <div class="text-center mb-16 text-white text-3xl font-black font-serif-title">Combos en Oferta</div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Combo Amor (Actualizado) -->
-                <article class="bg-stone-850 border border-stone-800 p-6 rounded-[2.5rem] flex flex-col justify-between hover:border-rose-500/50 transition-all group relative">
-                    <span class="absolute top-4 right-6 bg-rose-600 text-white text-[10px] font-black px-3 py-1 rounded-full z-10">MÁS VENDIDO</span>
+                <article class="bg-stone-850 border border-stone-800 p-6 rounded-[2.5rem] flex flex-col justify-between hover:border-rose-500/50 transition-all group">
                     <div>
-                        <div class="aspect-square rounded-3xl overflow-hidden mb-6 bg-stone-800">
-                            <img src="https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG-20260624-WA0006_1_uykn0m.jpg" alt="Combo Amor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </div>
+                        <img src="https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG-20260624-WA0006_1_uykn0m.jpg" class="aspect-square rounded-3xl object-cover mb-6 w-full">
                         <h3 class="text-2xl font-bold text-white mb-2">Combo Amor</h3>
-                        <p class="text-stone-400 text-xs mb-6">El kit más completo para sorprender: Agenda pasta dura, Mug personalizado y detalles sorpresa.</p>
-                        <ul class="text-xs space-y-3 mb-8 text-stone-300">
-                            <li><i class="fa-solid fa-heart text-rose-500 mr-2"></i> Agenda Media Carta Pasta Dura</li>
-                            <li><i class="fa-solid fa-heart text-rose-500 mr-2"></i> Llavero</li>
-                            <li><i class="fa-solid fa-heart text-rose-500 mr-2"></i> Lapicero Personalizado</li>
-																						<li><i class="fa-solid fa-heart text-rose-500 mr-2"></i>  Botón metálico</li>
-																						<li><i class="fa-solid fa-heart text-rose-500 mr-2"></i> Caja de regalo decorada</li>
-                        </ul>
+                        <p class="text-stone-400 text-xs mb-6 italic">Agenda Media Carta + Mug + Lapicero + Caja decorada.</p>
                     </div>
-                    <div class="pt-6 border-t border-stone-800">
-                        <div class="flex items-baseline gap-2 mb-4">
-                            <span class="text-3xl font-black text-rose-400">$60.000</span>
-                            <span class="text-stone-500 text-sm line-through">$75.000</span>
-                        </div>
-                        <a href="https://wa.me/573043518387?text=Quiero%20el%20Combo%20Amor%20de%20$55.000" target="_blank" class="block text-center bg-rose-600 text-white py-4 rounded-2xl font-bold hover:bg-rose-500 transition-all">Pedir este Combo</a>
+                    <div>
+                        <div class="text-3xl font-black text-rose-400 mb-4">$55.000 <span class="text-stone-500 text-sm line-through ml-2">$65.000</span></div>
+                        <a href="https://wa.me/573043518387?text=Quiero%20el%20Combo%20Amor" target="_blank" class="block text-center bg-rose-600 text-white py-4 rounded-2xl font-bold">Pedir Ahora</a>
                     </div>
                 </article>
-                
-                <!-- Aquí puedes añadir más combos similares -->
             </div>
         </div>
     </section>
@@ -133,26 +111,21 @@
        5. SIMULADOR VIRTUAL
     ============================================== -->
     <section id="simulador" class="py-24 bg-white px-4">
-        <div class="max-w-4xl mx-auto text-center mb-12">
-            <h2 class="text-3xl font-black font-serif-title text-stone-900">Simulador de Diseño</h2>
-            <p class="text-stone-500 mt-2">Sube tu foto favorita para ver cómo quedaría tu regalo.</p>
-        </div>
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-stone-50 rounded-[3rem] p-8 md:p-16 border border-stone-200">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-stone-50 rounded-[3rem] p-12 border border-stone-200">
             <div class="space-y-6">
+                <h2 class="text-2xl font-black font-serif-title">Simulador Digital</h2>
                 <div class="grid grid-cols-2 gap-3">
-                    <button onclick="changeSimTemplate('mug')" class="p-4 border-2 border-amber-500 bg-white rounded-2xl text-xs font-bold flex items-center justify-center gap-2 shadow-sm"><i class="fa-solid fa-mug-hot"></i> Mug 11oz</button>
-                    <button onclick="changeSimTemplate('agenda')" class="p-4 border-2 border-transparent bg-white rounded-2xl text-xs font-bold flex items-center justify-center gap-2 hover:border-stone-200 transition-all shadow-sm"><i class="fa-solid fa-book"></i> Agenda</button>
+                    <button onclick="changeSimTemplate('mug')" class="p-4 border-2 border-amber-500 bg-white rounded-2xl text-xs font-bold shadow-sm">Mug 11oz</button>
+                    <button onclick="changeSimTemplate('agenda')" class="p-4 border-2 border-transparent bg-white rounded-2xl text-xs font-bold shadow-sm">Agenda</button>
                 </div>
-                <label class="block p-10 border-2 border-dashed border-stone-300 rounded-[2.5rem] text-center cursor-pointer hover:border-amber-500 transition-all bg-white">
-                    <i class="fa-solid fa-image text-4xl text-stone-300 mb-3"></i>
-                    <span class="block text-sm font-bold text-stone-700">Seleccionar Imagen</span>
-                    <input type="file" class="hidden" onchange="loadSimImage(event)" accept="image/*">
+                <label class="block p-10 border-2 border-dashed border-stone-300 rounded-[2.5rem] text-center cursor-pointer bg-white">
+                    <span class="block text-sm font-bold text-stone-700">Subir mi foto</span>
+                    <input type="file" class="hidden" onchange="loadSimImage(event)">
                 </label>
             </div>
             <div class="flex justify-center">
-                <div id="sim-preview" class="relative w-64 h-64 bg-white rounded-3xl shadow-2xl border-4 border-white flex items-center justify-center overflow-hidden">
+                <div id="sim-preview" class="relative w-64 h-64 bg-white rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden border-4 border-white">
                     <div id="sim-photo" class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400')"></div>
-                    <span id="sim-label" class="relative text-[10px] font-black uppercase text-stone-400">Tu Diseño Aquí</span>
                     <div id="mug-handle" class="absolute -right-8 w-12 h-32 border-[12px] border-white rounded-[2rem]"></div>
                 </div>
             </div>
@@ -160,148 +133,106 @@
     </section>
 
     <!-- =============================================
-       6. FOOTER (PIE DE PÁGINA)
+       6. FOOTER - LÍNEA 185
     ============================================== -->
     <footer id="contacto" class="bg-stone-950 text-stone-500 py-16 border-t border-stone-900">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
-                <span class="text-2xl font-bold font-serif-title text-white">personalizARTE</span>
-                <p class="mt-4 text-xs leading-relaxed">Estudio de personalización creativa en Piedecuesta, Santander. Transformamos objetos cotidianos en recuerdos eternos.</p>
+                <!-- LOGO FOOTER (Línea 192) -->
+                <div class="flex items-baseline mb-4">
+                    <span class="text-xs font-medium text-transparent bg-clip-text bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 uppercase">personaliz</span>
+                    <span class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 uppercase ml-0.5">ARTE</span>
+                </div>
+                <p class="text-xs">Detalles con sentido desde Piedecuesta, Santander.</p>
             </div>
-            <div>
-                <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest">Contacto Directo</h4>
-                <ul class="text-xs space-y-4">
-                    <li><i class="fa-solid fa-location-dot text-amber-500 mr-2"></i> Piedecuesta, Santander, Col.</li>
-                    <li><i class="fa-solid fa-whatsapp text-amber-500 mr-2"></i> +57 304 351 8387</li>
-                </ul>
+            <div class="text-xs space-y-2 text-white">
+                <h4 class="font-bold mb-4 uppercase text-stone-500">Contacto</h4>
+                <p>📍 Piedecuesta, Santander</p>
+                <p>📞 +57 304 351 8387</p>
             </div>
-            <div>
-                <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest">Horario de Atención</h4>
-                <p class="text-xs leading-relaxed">Lunes a Sábado: 8:00 AM - 6:00 PM<br>Domingos: Previa Cita</p>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 text-center mt-16 pt-8 border-t border-stone-900 text-[10px] uppercase tracking-widest">
-            &copy; 2024 personalizARTE. Diseñado con ❤️ en Colombia.
         </div>
     </footer>
 
-    <!-- MODAL DE DETALLE DE PRODUCTO -->
+    <!-- MODAL -->
     <div id="itemModal" class="fixed inset-0 z-[100] bg-stone-950/90 hidden items-center justify-center p-4 backdrop-blur-md">
-        <div class="bg-white rounded-[2.5rem] overflow-hidden max-w-lg w-full relative shadow-2xl">
-            <button onclick="closeModal()" class="absolute right-6 top-6 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-all text-stone-800">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="h-80 bg-stone-100">
-                <img id="modalImg" src="" class="w-full h-full object-cover">
-            </div>
+        <div class="bg-white rounded-[2.5rem] overflow-hidden max-w-lg w-full relative">
+            <button onclick="closeModal()" class="absolute right-6 top-6 w-10 h-10 bg-white rounded-full shadow-lg">✕</button>
+            <div class="h-80 bg-stone-100"><img id="modalImg" src="" class="w-full h-full object-cover"></div>
             <div class="p-8">
-                <span id="modalSec" class="text-[10px] font-black uppercase text-amber-600 bg-amber-50 px-3 py-1 rounded-lg"></span>
-                <h3 id="modalName" class="text-2xl font-black font-serif-title mt-4 text-stone-900"></h3>
-                <p id="modalDesc" class="text-stone-500 text-sm mt-3"></p>
-                <div class="flex items-center justify-between mt-8 pt-6 border-t border-stone-100">
-                    <span id="modalPrice" class="text-3xl font-black text-stone-900"></span>
-                    <a id="modalWA" href="#" target="_blank" class="bg-emerald-600 text-white px-6 py-3.5 rounded-2xl font-bold flex items-center gap-2 hover:bg-emerald-500 transition-all shadow-lg shadow-emerald-600/20">
-                        <i class="fa-brands fa-whatsapp"></i> Cotizar
-                    </a>
+                <h3 id="modalName" class="text-2xl font-black font-serif-title text-stone-900"></h3>
+                <p id="modalDesc" class="text-stone-500 text-sm mt-2"></p>
+                <div class="flex items-center justify-between mt-8 border-t pt-6">
+                    <span id="modalPrice" class="text-3xl font-black"></span>
+                    <a id="modalWA" href="#" target="_blank" class="bg-emerald-600 text-white px-6 py-3 rounded-2xl font-bold">WhatsApp</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- =============================================
-       7. LÓGICA JAVASCRIPT (CATÁLOGO Y SIMULADOR)
-    ============================================== -->
     <script>
-        // 1. BASE DE DATOS DE PRODUCTOS
         const productsDb = [
-            { 
-                id: 1, 
-                title: "Agendas Media Carta", 
-                section: "agendas", 
-                sectionLabel: "📔 Agendas", 
-                price: "$37.000", 
-                image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/WA_1782345325590_1_ic7crs.jpg", 
-                description: "Agenda de alta calidad con pasta dura personalizada. Ideal para organización personal o empresarial." 
-            },
-            { 
-                id: 2, 
-                title: "Vaso Viajero Térmico", 
-                section: "vasos", 
-                sectionLabel: "🥤 Vasos", 
-                price: "$20.000", 
-                image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/v1782344875/IMG_20260624_175919174_1_pbd2gz.jpg", 
-                description: "Vaso térmico para mantener tus bebidas favoritas a la temperatura ideal. Personalizado con tu nombre o logo." 
-            },
-            { 
-                id: 3, 
-                title: "Rosas Eternas (Bouquet)", 
-                section: "ramos", 
-                sectionLabel: "💐 Ramos", 
-                price: "Desde $30.000", 
-                image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG-20260624-WA0005_1_ligazg.jpg", 
-                description: "Ramos artesanales de rosas eternas que nunca se marchitan. Un detalle lleno de amor y elegancia." 
-            },
-            { 
-                id: 4, 
-                title: "Libreta Pequeña Creativa", 
-                section: "agendas", 
-                sectionLabel: "📔 Agendas", 
-                price: "$20.000", 
-                image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG_20260624_175956387_1_hu1ki4.jpg", 
-                description: "Libreta de bolsillo personalizada. Perfecta para bocetos, notas rápidas y llevar a cualquier lugar." 
-            },
-            { 
-                id: 5, 
-                title: "Mug Premium 11oz", 
-                section: "mugs", 
-                sectionLabel: "☕ Mugs", 
-                price: "$15.000", 
-                image: https://res.cloudinary.com/dw9hwkkbl/image/upload/v1782349042/IMG_20260624_195209206_1_eqhht6.jpg", 
-                description: "Taza de cerámica de alto brillo. Resistente al microondas y lavavajillas. Personalización completa." 
-            },
-            {id: 6, 
-                title: "Botones Metálicos 58mm", 
-                section: "otros", 
-                sectionLabel: "🔘 Botones", 
-                price: "$3.000", 
-                image: "", 
-                description: "Pines publicitarios o de colección en alta resolución." 
-            }
+            { id: 1, title: "Agendas Media Carta", section: "agendas", sectionLabel: "📔 Agendas", price: "$37.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/WA_1782345325590_1_ic7crs.jpg", description: "Pasta dura 100% personalizada." },
+            { id: 2, title: "Vaso Viajero Térmico", section: "vasos", sectionLabel: "🥤 Vasos", price: "$20.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/v1782344875/IMG_20260624_175919174_1_pbd2gz.jpg", description: "Mantiene temperatura, diseño único." },
+            { id: 3, title: "Rosas Eternas (Bouquet)", section: "ramos", sectionLabel: "💐 Ramos", price: "Desde $30.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG-20260624-WA0005_1_ligazg.jpg", description: "Rosas artesanales que nunca marchitan." },
+            { id: 4, title: "Libreta Pequeña", section: "agendas", sectionLabel: "📔 Agendas", price: "$20.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG_20260624_175956387_1_hu1ki4.jpg", description: "Ideal para notas rápidas." },
+            { id: 5, title: "Mug Premium 11oz", section: "mugs", sectionLabel: "☕ Mugs", price: "$15.000", image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80", description: "Cerámica de alto brillo." },
+            { id: 6, title: "Botones Metálicos", section: "otros", sectionLabel: "🔘 Otros", price: "$3.500", image: "https://images.unsplash.com/photo-1590005354167-6da97870c913?w=600&q=80", description: "Pines de 58mm." }
         ];
 
         let activeSection = "todos";
         let searchString = "";
 
-        // 2. RENDERIZAR PRODUCTOS
         function displayCatalog() {
             const grid = document.getElementById("catalogGrid");
             const noResults = document.getElementById("noProductsFound");
-            if (!grid) return;
-
             grid.innerHTML = "";
-
-            const filtered = productsDb.filter(p => {
-                const matchesTab = activeSection === "todos" || p.section === activeSection;
-                const matchesSearch = p.title.toLowerCase().includes(searchString.toLowerCase());
-                return matchesTab && matchesSearch;
-            });
-
-            if (filtered.length === 0) {
-                noResults.classList.remove("hidden");
-                grid.classList.add("hidden");
-                return;
-            }
-
-            noResults.classList.add("hidden");
-            grid.classList.remove("hidden");
-
+            const filtered = productsDb.filter(p => (activeSection === "todos" || p.section === activeSection) && p.title.toLowerCase().includes(searchString.toLowerCase()));
+            if (filtered.length === 0) { noResults.classList.remove("hidden"); grid.classList.add("hidden"); return; }
+            noResults.classList.add("hidden"); grid.classList.remove("hidden");
             filtered.forEach(p => {
                 const article = document.createElement("article");
-                article.className = "bg-white border border-stone-200 rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:border-amber-400 transition-all cursor-pointer group";
+                article.className = "bg-white border rounded-[2.5rem] overflow-hidden hover:shadow-2xl transition-all cursor-pointer group";
                 article.onclick = () => showModalDetail(p);
-                article.innerHTML = `
-                    <div class="aspect-square bg-stone-100 overflow-hidden relative">
-                        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <span class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-xl text-[9px] font-black uppercase text-stone-700 shadow-sm">${p.sectionLabel}</span>
-                    </div>
-           
+                article.innerHTML = `<img src="${p.image}" class="aspect-square object-cover w-full group-hover:scale-110 transition-all duration-700"><div class="p-7"><h3 class="font-bold text-stone-900">${p.title}</h3><div class="mt-4 flex justify-between items-center"><span class="text-xl font-black">${p.price}</span><span class="text-amber-500 font-bold text-xs uppercase">Ver más</span></div></div>`;
+                grid.appendChild(article);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            displayCatalog();
+            document.querySelectorAll(".cat-tab").forEach(tab => tab.addEventListener("click", () => {
+                document.querySelectorAll(".cat-tab").forEach(b => b.className = "cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600");
+                tab.className = "cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-stone-900 text-white shadow-lg";
+                activeSection = tab.getAttribute("data-sec");
+                displayCatalog();
+            }));
+            document.getElementById("searchInput").addEventListener("input", (e) => { searchString = e.target.value; displayCatalog(); });
+        });
+
+        function showModalDetail(p) {
+            document.getElementById("modalName").innerText = p.title;
+            document.getElementById("modalDesc").innerText = p.description;
+            document.getElementById("modalPrice").innerText = p.price;
+            document.getElementById("modalImg").src = p.image;
+            document.getElementById("modalWA").href = `https://wa.me/573043518387?text=Me%20interesa:%20${p.title}`;
+            document.getElementById("itemModal").classList.remove("hidden");
+            document.getElementById("itemModal").classList.add("flex");
+        }
+
+        function closeModal() { document.getElementById("itemModal").classList.add("hidden"); }
+
+        function loadSimImage(e) {
+            const reader = new FileReader();
+            reader.onload = f => { document.getElementById("sim-photo").style.backgroundImage = `url('${f.target.result}')`; document.getElementById("sim-photo").style.opacity = "1"; };
+            reader.readAsDataURL(e.target.files[0]);
+        }
+
+        function changeSimTemplate(t) {
+            const h = document.getElementById("mug-handle");
+            const p = document.getElementById("sim-preview");
+            if (t === 'mug') { h.classList.remove("hidden"); p.className = "relative w-64 h-64 bg-white rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden border-4 border-white"; }
+            else { h.classList.add("hidden"); p.className = "relative w-56 h-72 bg-white rounded-md shadow-2xl flex items-center justify-center overflow-hidden border-4 border-white"; }
+        }
+    </script>
+</body>
+</html>
