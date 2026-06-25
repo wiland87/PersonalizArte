@@ -129,6 +129,53 @@
             </div>
         </div>
     </section>
+    <!-- =============================================
+       SECCIÓN: ARMA TU COMBO (DINÁMICO)
+    ============================================== -->
+    <section id="arma-tu-combo" class="py-24 bg-amber-50/30 border-y border-stone-200">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-amber-600 font-black text-xs uppercase tracking-widest">Personalización Total</span>
+                <h2 class="text-4xl font-black font-serif-title text-stone-900 mt-2">Arma tu propio Combo</h2>
+                <p class="text-stone-500 mt-2 text-sm">Selecciona los productos que quieras y obtén un 5% de descuento automático</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                <!-- Opciones de Productos -->
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4" id="customComboOptions">
+                    <!-- Los productos se cargan desde el JS para mantener los precios sincronizados -->
+                </div>
+
+                <!-- Resumen de Cuenta -->
+                <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-stone-100 sticky top-24">
+                    <h3 class="text-xl font-bold text-stone-900 mb-6 border-b pb-4">Resumen del Combo</h3>
+                    <div class="space-y-4 mb-8" id="selectedItemsList">
+                        <p class="text-stone-400 text-xs italic">No has seleccionado productos aún...</p>
+                    </div>
+                    
+                    <div class="space-y-2 border-t pt-6">
+                        <div class="flex justify-between text-sm text-stone-500">
+                            <span>Subtotal:</span>
+                            <span id="subtotalLabel">$0</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-emerald-600 font-bold">
+                            <span>Descuento (5%):</span>
+                            <span id="discountLabel">-$0</span>
+                        </div>
+                        <div class="flex justify-between text-2xl font-black text-stone-900 pt-2">
+                            <span>Total:</span>
+                            <span id="totalLabel" class="text-amber-600">$0</span>
+                        </div>
+                    </div>
+
+                    <button onclick="sendCustomComboWhatsApp()" id="btnSendCombo" disabled class="w-full mt-8 bg-stone-900 text-white py-4 rounded-2xl font-bold hover:bg-stone-800 transition-all disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        Pedir Combo Personalizado
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- =============================================
        5. SIMULADOR VIRTUAL
