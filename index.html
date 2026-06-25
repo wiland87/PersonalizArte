@@ -1,227 +1,342 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
+    <!-- 
+        ================================================================
+        1. CONFIGURACIÓN TÉCNICA Y SEO
+        ================================================================
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>personalizARTE - Detalles con Sentido</title>
+    <title>personalizARTE - Detalles con Sentido | Piedecuesta</title>
     
+    <!-- 1.1 Meta Etiquetas SEO -->
+    <meta name="description" content="Estudio de personalización en Piedecuesta. Mugs, agendas, combos y regalos únicos.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- 1.2 Estilos Globales y Tipografía -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fdfcfb; }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        :root { scroll-behavior: smooth; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fdfcfb; color: #1c1917; }
         .font-serif-title { font-family: 'Playfair Display', serif; }
-        .glass-nav { background: rgba(253, 252, 251, 0.9); backdrop-filter: blur(10px); }
+        
+        /* Efectos Visuales Especiales */
+        .glass-nav { background: rgba(253, 252, 251, 0.9); backdrop-filter: blur(12px); }
         .scrollbar-none::-webkit-scrollbar { display: none; }
+        .silver-text {
+            background: linear-gradient(to right, #94a3b8 0%, #f1f5f9 50%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="text-stone-800">
+<body>
 
-    <!-- =============================================
-       1. NAVEGACIÓN (HEADER) - LÍNEA 20
-    ============================================== -->
+    <!-- 
+        ================================================================
+        2. ESTRUCTURA DE NAVEGACIÓN (HEADER)
+        ================================================================
+    -->
     <header class="sticky top-0 z-50 w-full glass-nav border-b border-stone-200/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- 2.1 Logo Identidad (Plateado + Gradient) -->
             <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-amber-500 shadow-sm bg-white">
+                <div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-amber-500 bg-white shadow-sm shrink-0">
                     <img src="logo.jpg" alt="Logo" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=P+A&background=f59e0b&color=fff'">
                 </div>
-                <!-- LOGO CON DEGRADADO PLATEADO (Línea 27) -->
-                <div class="flex items-baseline">
-                    <span class="text-sm sm:text-base font-medium tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 uppercase">personaliz</span>
-                    <span class="text-2xl sm:text-4xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 uppercase ml-0.5 font-serif-title">ARTE</span>
+                <div class="flex flex-col leading-none">
+                    <div class="flex items-baseline">
+                        <span class="text-xs sm:text-sm font-bold tracking-widest silver-text uppercase italic">personaliz</span>
+                        <span class="text-2xl sm:text-4xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 uppercase ml-0.5 font-serif-title">ARTE</span>
+                    </div>
+                    <span class="text-[8px] uppercase tracking-[0.3em] text-stone-400 font-bold">Detalles con Sentido</span>
                 </div>
             </div>
-            <nav class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-stone-600">
+
+            <!-- 2.2 Menú de Navegación -->
+            <nav class="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-widest text-stone-500">
                 <a href="#catalogo" class="hover:text-amber-600 transition-colors">Catálogo</a>
                 <a href="#combos" class="hover:text-rose-600 transition-colors">Combos</a>
+                <a href="#arma-tu-combo" class="hover:text-emerald-600 transition-colors">Armar Combo</a>
                 <a href="#simulador" class="hover:text-indigo-600 transition-colors">Simulador</a>
             </nav>
-            <a href="https://wa.me/573043518387" target="_blank" class="bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:bg-emerald-500 transition-all shadow-lg">
-                <i class="fa-brands fa-whatsapp"></i> <span class="hidden sm:inline">WhatsApp</span>
+
+            <!-- 2.3 Acceso Rápido WhatsApp -->
+            <a href="https://wa.me/573043518387" target="_blank" class="bg-emerald-600 text-white px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:bg-emerald-500 transition-all shadow-lg shadow-emerald-600/20 active:scale-95">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span class="hidden sm:inline text-xs uppercase tracking-widest">WhatsApp</span>
             </a>
         </div>
     </header>
 
-    <!-- =============================================
-       2. HERO SECCIÓN
-    ============================================== -->
-    <section class="py-16 lg:py-24 bg-gradient-to-b from-amber-50/50 to-transparent text-center px-4">
-        <span class="inline-block bg-rose-50 text-rose-700 text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6 border border-rose-100">🎨 Piedecuesta, Santander</span>
-        <h1 class="text-4xl sm:text-6xl font-extrabold font-serif-title text-stone-900 leading-tight mb-6">Tus mejores momentos,<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-rose-600">hechos arte.</span></h1>
-        <p class="max-w-2xl mx-auto text-stone-600 text-base mb-10">Explora nuestra colección de detalles personalizados. Calidad premium en cada estampado.</p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#catalogo" class="px-8 py-4 bg-stone-900 text-white font-bold rounded-2xl shadow-xl hover:bg-stone-800 transition-all">Explorar Catálogo</a>
-            <a href="#combos" class="px-8 py-4 bg-white text-stone-800 font-bold rounded-2xl border border-stone-200 hover:bg-stone-50 transition-all">Ver Promociones</a>
+    <!-- 
+        ================================================================
+        3. SECCIÓN HERO (INTRODUCCIÓN)
+        ================================================================
+    -->
+    <section class="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-amber-50/50 to-transparent">
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <span class="inline-block bg-white text-amber-600 text-[10px] font-black uppercase tracking-[0.25em] px-5 py-2 rounded-full mb-8 shadow-sm border border-amber-100">✨ Creatividad sin límites</span>
+            <h1 class="text-5xl sm:text-7xl font-black font-serif-title text-stone-900 leading-[1.1] mb-8">
+                Tus recuerdos,<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600">plasmados para siempre.</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-stone-500 text-base sm:text-lg mb-12 font-medium">
+                Estudio de diseño y personalización en Piedecuesta. Creamos regalos que emocionan y detalles que perduran.
+            </p>
+            <div class="flex flex-wrap justify-center gap-5">
+                <a href="#catalogo" class="px-10 py-5 bg-stone-900 text-white font-bold rounded-2xl shadow-2xl hover:bg-stone-800 transition-all hover:-translate-y-1">Ver Catálogo</a>
+                <a href="#arma-tu-combo" class="px-10 py-5 bg-white text-stone-800 font-bold rounded-2xl border border-stone-200 shadow-sm hover:bg-stone-50 transition-all">Armar mi Combo</a>
+            </div>
         </div>
     </section>
 
-    <!-- =============================================
-       3. CATÁLOGO DE PRODUCTOS
-    ============================================== -->
-    <main id="catalogo" class="max-w-7xl mx-auto px-4 py-12">
-        <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
-            <div>
-                <h2 class="text-3xl font-black font-serif-title text-stone-900">Nuestro Catálogo</h2>
-                <p class="text-stone-500 text-sm mt-1">Regalos 100% personalizados</p>
+    <!-- 
+        ================================================================
+        4. SECCIÓN CATÁLOGO DINÁMICO
+        ================================================================
+    -->
+    <main id="catalogo" class="max-w-7xl mx-auto px-4 py-24">
+        <!-- 4.1 Encabezado y Buscador -->
+        <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+            <div class="max-w-md">
+                <h2 class="text-4xl font-black font-serif-title text-stone-900">Colección de Productos</h2>
+                <div class="h-1.5 w-20 bg-gradient-to-r from-amber-500 to-rose-500 mt-4 rounded-full"></div>
             </div>
-            <div class="relative w-full md:w-80">
-                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-stone-400"></i>
-                <input type="text" id="searchInput" placeholder="Buscar..." class="w-full pl-11 pr-4 py-3 bg-white border border-stone-200 rounded-2xl focus:ring-2 focus:ring-amber-500/20 outline-none">
+            <div class="relative w-full md:w-96">
+                <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-stone-400"></i>
+                <input type="text" id="searchInput" placeholder="¿Qué estás buscando hoy?" class="w-full pl-14 pr-6 py-4 bg-white border border-stone-200 rounded-2xl shadow-sm focus:ring-4 focus:ring-amber-500/10 outline-none transition-all">
             </div>
         </div>
 
-        <div class="flex overflow-x-auto pb-6 mb-10 scrollbar-none gap-3" id="categoriesTabs">
-            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-stone-900 text-white shadow-lg" data-sec="todos">🌟 Todos</button>
-            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600" data-sec="agendas">📔 Agendas</button>
-            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600" data-sec="vasos">🥤 Vasos</button>
-            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600" data-sec="ramos">💐 Ramos</button>
-            <button class="cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600" data-sec="mugs">☕ Mugs</button>
+        <!-- 4.2 Tabs de Filtrado -->
+        <div class="flex overflow-x-auto pb-6 mb-12 scrollbar-none gap-3" id="categoriesTabs">
+            <button class="cat-tab px-8 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest whitespace-nowrap bg-stone-900 text-white shadow-xl transition-all" data-sec="todos">🌟 Todos</button>
+            <button class="cat-tab px-8 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest whitespace-nowrap bg-white border border-stone-200 text-stone-500 hover:bg-stone-50 transition-all" data-sec="agendas">📔 Agendas</button>
+            <button class="cat-tab px-8 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest whitespace-nowrap bg-white border border-stone-200 text-stone-500 hover:bg-stone-50 transition-all" data-sec="vasos">🥤 Vasos</button>
+            <button class="cat-tab px-8 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest whitespace-nowrap bg-white border border-stone-200 text-stone-500 hover:bg-stone-50 transition-all" data-sec="ramos">💐 Ramos</button>
+            <button class="cat-tab px-8 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest whitespace-nowrap bg-white border border-stone-200 text-stone-500 hover:bg-stone-50 transition-all" data-sec="mugs">☕ Mugs</button>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="catalogGrid"></div>
-        <div id="noProductsFound" class="hidden text-center py-20 bg-stone-50 rounded-3xl border-2 border-dashed border-stone-200">
-            <p class="text-stone-400 font-bold">No se encontraron productos.</p>
+        <!-- 4.3 Rejilla de Productos (JS) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10" id="catalogGrid"></div>
+        
+        <!-- 4.4 Estado Vacío -->
+        <div id="noProductsFound" class="hidden text-center py-32 bg-stone-50 rounded-[3rem] border-2 border-dashed border-stone-200">
+            <i class="fa-solid fa-box-open text-5xl text-stone-300 mb-4"></i>
+            <p class="text-stone-400 font-bold">No encontramos productos con ese nombre.</p>
         </div>
     </main>
 
-    <!-- =============================================
-       4. SECCIÓN DE COMBOS
-    ============================================== -->
-<section id="combos" class="bg-stone-900 py-24 px-4">
-        <div class="max-w-4xl mx-auto"> <!-- Contenedor que limita el ancho en PC -->
-            <div class="text-center mb-16 text-white">
-                <h2 class="text-4xl font-black font-serif-title mb-4">Combos en Oferta</h2>
+    <!-- 
+        ================================================================
+        5. SECCIÓN COMBOS FIJOS (PROMOCIONES)
+        ================================================================
+    -->
+    <section id="combos" class="bg-stone-900 py-24 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black font-serif-title text-white mb-4">Combos Destacados</h2>
+                <div class="h-1 w-20 bg-rose-500 mx-auto rounded-full"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                
-                <!-- COMBO AMOR -->
-                <article class="bg-stone-850 border border-stone-800 p-6 rounded-[2.5rem] flex flex-col h-full hover:border-rose-500/50 transition-all">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+                <!-- 5.1 Combo Amor -->
+                <article class="bg-stone-850 border border-stone-800 p-8 rounded-[3rem] flex flex-col h-full hover:border-rose-500/50 transition-all group relative">
                     <div class="flex-grow">
-                        <div class="aspect-square w-full overflow-hidden rounded-3xl mb-6 bg-stone-800">
-                            <img src="https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG-20260624-WA0006_1_uykn0m.jpg" class="w-full h-full object-cover">
+                        <div class="aspect-square w-full overflow-hidden rounded-[2rem] mb-8 bg-stone-800">
+                            <img src="https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG-20260624-WA0006_1_uykn0m.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Combo Amor</h3>
-                        <p class="text-xs text-stone-300 mb-6">Agenda Media Carta + Mug + Lapicero + Caja.</p>
+                        <h3 class="text-2xl font-black text-white mb-3">Combo Amor</h3>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed">Agenda Media Carta + Mug 11oz + Lapicero personalizado + Caja decorada.</p>
                     </div>
-                    <div class="pt-6 border-t border-stone-800">
-                        <div class="text-3xl font-black text-rose-400 mb-4">$55.000</div>
-                        <a href="https://wa.me/573043518387?text=Quiero%20el%20Combo%20Amor" class="block text-center bg-rose-600 text-white py-4 rounded-2xl font-bold">Pedir</a>
+                    <div class="pt-8 border-t border-stone-800 mt-auto text-center">
+                        <div class="text-4xl font-black text-rose-400 mb-6">$55.000</div>
+                        <a href="https://wa.me/573043518387?text=Quiero%20el%20Combo%20Amor" target="_blank" class="block w-full bg-rose-600 text-white py-4 rounded-2xl font-bold hover:bg-rose-500 transition-all shadow-lg shadow-rose-600/20">Pedir Combo</a>
                     </div>
                 </article>
 
-                <!-- COMBO OFICINA -->
-                <article class="bg-stone-850 border border-stone-800 p-6 rounded-[2.5rem] flex flex-col h-full hover:border-amber-500/50 transition-all">
+                <!-- 5.2 Combo Oficina -->
+                <article class="bg-stone-850 border border-stone-800 p-8 rounded-[3rem] flex flex-col h-full hover:border-amber-500/50 transition-all group relative">
+                    <span class="absolute top-6 right-8 bg-amber-600 text-white text-[9px] font-black px-3 py-1 rounded-full z-10 uppercase tracking-widest">Nuevo</span>
                     <div class="flex-grow">
-                        <div class="aspect-square w-full overflow-hidden rounded-3xl mb-6 bg-stone-800">
-                            <img src="https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG_20260624_180604533_1_bugi7a.jpg" class="w-full h-full object-cover">
+                        <div class="aspect-square w-full overflow-hidden rounded-[2rem] mb-8 bg-stone-800">
+                            <img src="https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG_20260624_180604533_1_bugi7a.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Combo Oficina</h3>
-                        <p class="text-xs text-stone-300 mb-6">Mug + Libreta 15x11 + Lapicero + Botón + Llavero.</p>
+                        <h3 class="text-2xl font-black text-white mb-3">Combo Oficina</h3>
+                        <p class="text-stone-400 text-sm mb-6 leading-relaxed">Mug 11oz + Libreta 15x11cm + Lapicero + Botón Metálico + Llavero (2 fotos).</p>
                     </div>
-                    <div class="pt-6 border-t border-stone-800">
-                        <div class="text-3xl font-black text-amber-400 mb-4">$50.000</div>
-                        <a href="https://wa.me/573043518387?text=Quiero%20el%20Combo%20Oficina" class="block text-center bg-amber-500 text-stone-950 py-4 rounded-2xl font-bold">Pedir</a>
+                    <div class="pt-8 border-t border-stone-800 mt-auto text-center">
+                        <div class="text-4xl font-black text-amber-400 mb-6">$50.000</div>
+                        <a href="https://wa.me/573043518387?text=Quiero%20el%20Combo%20Oficina" target="_blank" class="block w-full bg-amber-500 text-stone-950 py-4 rounded-2xl font-bold hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20">Pedir Combo</a>
                     </div>
                 </article>
-
             </div>
         </div>
     </section>
-    <!-- =============================================
-       SECCIÓN: ARMA TU COMBO (DINÁMICO)
-    ============================================== -->
-    <section id="arma-tu-combo" class="py-24 bg-amber-50/30 border-y border-stone-200">
+
+    <!-- 
+        ================================================================
+        6. SECCIÓN INTERACTIVA: ARMA TU COMBO
+        ================================================================
+    -->
+    <section id="arma-tu-combo" class="py-24 bg-amber-50/40 border-y border-stone-200">
         <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <span class="text-amber-600 font-black text-xs uppercase tracking-widest">Personalización Total</span>
+            <div class="text-center mb-16">
+                <span class="text-amber-600 font-black text-[10px] uppercase tracking-widest">Tú eliges el regalo</span>
                 <h2 class="text-4xl font-black font-serif-title text-stone-900 mt-2">Arma tu propio Combo</h2>
-                <p class="text-stone-500 mt-2 text-sm">Selecciona los productos que quieras y obtén un 5% de descuento automático</p>
+                <p class="text-stone-500 mt-3 font-medium">Selecciona tus favoritos y recibe un <span class="text-emerald-600 font-bold">5% de Descuento</span></p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-                <!-- Opciones de Productos -->
-                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4" id="customComboOptions">
-                    <!-- Los productos se cargan desde el JS para mantener los precios sincronizados -->
-                </div>
+                <!-- 6.1 Lista de Selección -->
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4" id="customComboOptions"></div>
 
-                <!-- Resumen de Cuenta -->
-                <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-stone-100 sticky top-24">
-                    <h3 class="text-xl font-bold text-stone-900 mb-6 border-b pb-4">Resumen del Combo</h3>
-                    <div class="space-y-4 mb-8" id="selectedItemsList">
-                        <p class="text-stone-400 text-xs italic">No has seleccionado productos aún...</p>
+                <!-- 6.2 Resumen Dinámico -->
+                <div class="bg-white p-10 rounded-[3rem] shadow-2xl border border-stone-100 sticky top-24">
+                    <h3 class="text-xl font-bold text-stone-900 mb-8 border-b border-stone-50 pb-6 italic">Mi Selección</h3>
+                    <div class="space-y-4 mb-8 max-h-60 overflow-y-auto pr-2 scrollbar-none" id="selectedItemsList">
+                        <p class="text-stone-400 text-[11px] uppercase tracking-widest text-center py-10">Elige productos...</p>
                     </div>
                     
-                    <div class="space-y-2 border-t pt-6">
+                    <div class="space-y-3 border-t border-stone-50 pt-8">
                         <div class="flex justify-between text-sm text-stone-500">
-                            <span>Subtotal:</span>
+                            <span>Subtotal</span>
                             <span id="subtotalLabel">$0</span>
                         </div>
                         <div class="flex justify-between text-sm text-emerald-600 font-bold">
-                            <span>Descuento (5%):</span>
+                            <span>Ahorro (5%)</span>
                             <span id="discountLabel">-$0</span>
                         </div>
-                        <div class="flex justify-between text-2xl font-black text-stone-900 pt-2">
-                            <span>Total:</span>
-                            <span id="totalLabel" class="text-amber-600">$0</span>
+                        <div class="flex justify-between text-3xl font-black text-stone-900 pt-4">
+                            <span>Total</span>
+                            <span id="totalLabel" class="text-amber-500">$0</span>
                         </div>
                     </div>
 
-                    <button onclick="sendCustomComboWhatsApp()" id="btnSendCombo" disabled class="w-full mt-8 bg-stone-900 text-white py-4 rounded-2xl font-bold hover:bg-stone-800 transition-all disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        Pedir Combo Personalizado
+                    <button onclick="sendCustomComboWhatsApp()" id="btnSendCombo" disabled class="w-full mt-10 bg-stone-900 text-white py-5 rounded-2xl font-bold hover:bg-stone-800 transition-all disabled:opacity-20 disabled:cursor-not-allowed flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        Confirmar Combo
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    
-    <!-- =============================================
-       6. FOOTER - LÍNEA 185
-    ============================================== -->
-    <footer id="contacto" class="bg-stone-950 text-stone-500 py-16 border-t border-stone-900">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div>
-                <!-- LOGO FOOTER (Línea 192) -->
-                <div class="flex items-baseline mb-4">
-                    <span class="text-xs font-medium text-transparent bg-clip-text bg-gradient-to-r from-stone-300 via-stone-500 to-stone-300 uppercase">personaliz</span>
-                    <span class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 uppercase ml-0.5">ARTE</span>
+    <!-- 
+        ================================================================
+        7. SIMULADOR VIRTUAL DE DISEÑO
+        ================================================================
+    -->
+    <section id="simulador" class="py-24 bg-white px-4">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center bg-stone-50 rounded-[4rem] p-12 md:p-20 border border-stone-100 shadow-sm">
+            <div class="space-y-8">
+                <div class="space-y-3">
+                    <h2 class="text-3xl font-black font-serif-title">Laboratorio de Diseño</h2>
+                    <p class="text-stone-500 text-sm">Visualiza tu idea digital antes de la producción.</p>
                 </div>
-                <p class="text-xs">Detalles con sentido desde Piedecuesta, Santander.</p>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <button onclick="changeSimTemplate('mug')" class="p-4 border-2 border-amber-500 bg-white rounded-2xl text-xs font-black shadow-sm">Mug 11oz</button>
+                    <button onclick="changeSimTemplate('agenda')" class="p-4 border-2 border-transparent bg-white rounded-2xl text-xs font-black shadow-sm hover:border-stone-200 transition-all">Agenda</button>
+                </div>
+
+                <label class="block p-12 border-2 border-dashed border-stone-300 rounded-[3rem] text-center cursor-pointer bg-white hover:border-amber-500 transition-all group">
+                    <i class="fa-solid fa-cloud-arrow-up text-4xl text-stone-200 mb-4 group-hover:text-amber-500"></i>
+                    <span class="block text-xs font-black uppercase text-stone-600">Cargar mi Fotografía</span>
+                    <input type="file" class="hidden" onchange="loadSimImage(event)" accept="image/*">
+                </label>
             </div>
-            <div class="text-xs space-y-2 text-white">
-                <h4 class="font-bold mb-4 uppercase text-stone-500">Contacto</h4>
-                <p>📍 Piedecuesta, Santander</p>
-                <p>📞 +57 304 351 8387</p>
+
+            <!-- Vista Previa Simulator -->
+            <div class="flex justify-center">
+                <div id="sim-preview" class="relative w-64 h-64 bg-white rounded-[2.5rem] shadow-2xl flex items-center justify-center overflow-hidden border-[10px] border-white ring-1 ring-stone-100">
+                    <div id="sim-photo" class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400')"></div>
+                    <span id="sim-label" class="relative text-[9px] font-black uppercase tracking-widest text-stone-300">Área de Estampado</span>
+                    <div id="mug-handle" class="absolute -right-8 w-14 h-36 border-[14px] border-white rounded-[2.5rem]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        ================================================================
+        8. FOOTER (PIE DE PÁGINA)
+        ================================================================
+    -->
+    <footer id="contacto" class="bg-stone-950 text-stone-500 py-20 border-t border-stone-900">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-16">
+            <!-- 8.1 Marca -->
+            <div>
+                <div class="flex items-baseline mb-6">
+                    <span class="text-xs font-bold silver-text italic uppercase">personaliz</span>
+                    <span class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-rose-500 uppercase ml-0.5">ARTE</span>
+                </div>
+                <p class="text-[11px] leading-relaxed uppercase tracking-wider">Estudio creativo de personalización. Calidad, diseño y puntualidad desde Piedecuesta, Santander.</p>
+            </div>
+            <!-- 8.2 Contacto -->
+            <div>
+                <h4 class="text-white text-[11px] font-black uppercase tracking-[0.2em] mb-8">Ubicación</h4>
+                <p class="text-xs mb-4">📍 Piedecuesta, Santander, Col.</p>
+                <p class="text-xs">📞 +57 304 351 8387</p>
+            </div>
+            <!-- 8.3 Redes -->
+            <div>
+                <h4 class="text-white text-[11px] font-black uppercase tracking-[0.2em] mb-8">Síguenos</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-stone-900 rounded-xl flex items-center justify-center hover:bg-amber-500 hover:text-stone-950 transition-all"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-stone-900 rounded-xl flex items-center justify-center hover:bg-amber-500 hover:text-stone-950 transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- MODAL -->
-    <div id="itemModal" class="fixed inset-0 z-[100] bg-stone-950/90 hidden items-center justify-center p-4 backdrop-blur-md">
-        <div class="bg-white rounded-[2.5rem] overflow-hidden max-w-lg w-full relative">
-            <button onclick="closeModal()" class="absolute right-6 top-6 w-10 h-10 bg-white rounded-full shadow-lg">✕</button>
+    <!-- 
+        ================================================================
+        9. COMPONENTES GLOBALES (MODALES)
+        ================================================================
+    -->
+    <div id="itemModal" class="fixed inset-0 z-[100] bg-stone-950/95 hidden items-center justify-center p-4 backdrop-blur-md">
+        <div class="bg-white rounded-[3.5rem] overflow-hidden max-w-lg w-full relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute right-8 top-8 z-10 w-12 h-12 bg-white rounded-full shadow-lg hover:scale-110 transition-transform">✕</button>
             <div class="h-80 bg-stone-100"><img id="modalImg" src="" class="w-full h-full object-cover"></div>
-            <div class="p-8">
-                <h3 id="modalName" class="text-2xl font-black font-serif-title text-stone-900"></h3>
-                <p id="modalDesc" class="text-stone-500 text-sm mt-2"></p>
-                <div class="flex items-center justify-between mt-8 border-t pt-6">
-                    <span id="modalPrice" class="text-3xl font-black"></span>
-                    <a id="modalWA" href="#" target="_blank" class="bg-emerald-600 text-white px-6 py-3 rounded-2xl font-bold">WhatsApp</a>
+            <div class="p-10 text-center">
+                <span id="modalSec" class="text-[9px] font-black uppercase text-amber-600 bg-amber-50 px-4 py-1.5 rounded-full"></span>
+                <h3 id="modalName" class="text-3xl font-black font-serif-title mt-6 text-stone-900 leading-tight"></h3>
+                <p id="modalDesc" class="text-stone-500 text-sm mt-4 leading-relaxed"></p>
+                <div class="flex flex-col items-center mt-10 pt-8 border-t border-stone-50">
+                    <span id="modalPrice" class="text-4xl font-black text-stone-900 mb-6"></span>
+                    <a id="modalWA" href="#" target="_blank" class="w-full bg-emerald-600 text-white py-5 rounded-2xl font-bold text-sm shadow-xl shadow-emerald-600/20">Cotizar por WhatsApp</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- 
+        ================================================================
+        10. LÓGICA DE PROGRAMACIÓN (JAVASCRIPT)
+        ================================================================
+    -->
     <script>
+        // 10.1 Base de Datos de Productos del Catálogo
+        const productsDb = [
+            { id: 1, title: "Agendas Media Carta", section: "agendas", sectionLabel: "📔 Agendas", price: "$37.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/WA_1782345325590_1_ic7crs.jpg", description: "Pasta dura de lujo con laminado mate. Personalización total de portada." },
+            { id: 2, title: "Vaso Viajero Térmico", section: "vasos", sectionLabel: "🥤 Vasos", price: "$20.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/v1782344875/IMG_20260624_175919174_1_pbd2gz.jpg", description: "Mantiene el frío y el calor. Ideal para el café del día." },
+            { id: 3, title: "Rosas Eternas (Bouquet)", section: "ramos", sectionLabel: "💐 Ramos", price: "Desde $30.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG-20260624-WA0005_1_ligazg.jpg", description: "Artesanales en cinta de seda. Un detalle que nunca muere." },
+            { id: 4, title: "Libreta 15x11 Creativa", section: "agendas", sectionLabel: "📔 Agendas", price: "$20.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG_20260624_175956387_1_hu1ki4.jpg", description: "Tamaño práctico para llevar a todos lados. Hojas de alta calidad." },
+            { id: 5, title: "Mug Premium 11oz", section: "mugs", sectionLabel: "☕ Mugs", price: "$15.000", image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80", description: "Cerámica importada AAA. Colores vibrantes y duraderos." },
+            { id: 6, title: "Botones Metálicos 58mm", section: "otros", sectionLabel: "🔘 Otros", price: "$3.500", image: "https://images.unsplash.com/photo-1590005354167-6da97870c913?w=600&q=80", description: "Pines de metal con impresión fotográfica." }
+        ];
 
-// Datos para el "Arma tu combo"
+        // 10.2 Productos para la sección "Arma tu Combo"
         const customComboProducts = [
             { id: 'c1', name: 'Mug 11 Onzas', price: 15000, icon: '☕' },
             { id: 'c2', name: 'Agenda Media Carta', price: 37000, icon: '📔' },
-            { id: 'c3', name: 'Libreta Pequeña', price: 20000, icon: '📒' },
+            { id: 'c3', name: 'Libreta (15x11cm)', price: 20000, icon: '📒' },
             { id: 'c4', name: 'Vaso Viajero', price: 20000, icon: '🥤' },
             { id: 'c5', name: 'Botón Metálico', price: 3500, icon: '🔘' },
             { id: 'c6', name: 'Rosas Eternas', price: 30000, icon: '💐' },
@@ -229,135 +344,102 @@
             { id: 'c8', name: 'Lapicero Personalizado', price: 5000, icon: '🖊️' }
         ];
 
+        let activeSection = "todos";
+        let searchString = "";
         let selectedComboItems = [];
 
+        // 10.3 Lógica del Catálogo
+        function displayCatalog() {
+            const grid = document.getElementById("catalogGrid");
+            const noResults = document.getElementById("noProductsFound");
+            if (!grid) return;
+
+            grid.innerHTML = "";
+            const filtered = productsDb.filter(p => (activeSection === "todos" || p.section === activeSection) && p.title.toLowerCase().includes(searchString.toLowerCase()));
+            
+            if (filtered.length === 0) { noResults.classList.remove("hidden"); grid.classList.add("hidden"); return; }
+            noResults.classList.add("hidden"); grid.classList.remove("hidden");
+
+            filtered.forEach(p => {
+                const art = document.createElement("article");
+                art.className = "bg-white border border-stone-100 rounded-[3rem] overflow-hidden hover:shadow-2xl transition-all cursor-pointer group";
+                art.onclick = () => showModalDetail(p);
+                art.innerHTML = `
+                    <div class="aspect-square overflow-hidden bg-stone-50"><img src="${p.image}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"></div>
+                    <div class="p-8"><h3 class="font-bold text-stone-900 group-hover:text-amber-600 transition-colors">${p.title}</h3><div class="mt-6 flex justify-between items-center"><span class="text-xl font-black">${p.price}</span><span class="text-[9px] font-black uppercase tracking-widest text-amber-500">Detalles</span></div></div>`;
+                grid.appendChild(art);
+            });
+        }
+
+        // 10.4 Lógica "Arma tu Combo"
         function initCustomCombo() {
             const container = document.getElementById('customComboOptions');
             if(!container) return;
-
             customComboProducts.forEach(prod => {
                 const item = document.createElement('div');
-                item.className = "relative";
                 item.innerHTML = `
-                    <input type="checkbox" id="${prod.id}" value="${prod.id}" class="hidden peer" onchange="toggleComboItem('${prod.id}')">
-                    <label for="${prod.id}" class="flex items-center p-4 bg-white border-2 border-stone-100 rounded-2xl cursor-pointer hover:border-amber-200 peer-checked:border-amber-500 peer-checked:bg-amber-50 transition-all select-none">
+                    <input type="checkbox" id="${prod.id}" class="hidden peer" onchange="toggleComboItem('${prod.id}')">
+                    <label for="${prod.id}" class="flex items-center p-5 bg-white border-2 border-stone-100 rounded-3xl cursor-pointer hover:border-amber-200 peer-checked:border-amber-500 peer-checked:bg-amber-50 transition-all select-none">
                         <span class="text-2xl mr-4">${prod.icon}</span>
-                        <div class="flex-grow">
-                            <h4 class="font-bold text-stone-900 text-sm">${prod.name}</h4>
-                            <p class="text-stone-500 text-xs">$${prod.price.toLocaleString()}</p>
-                        </div>
-                        <div class="w-6 h-6 rounded-full border-2 border-stone-200 peer-checked:bg-amber-500 flex items-center justify-center">
-                            <i class="fa-solid fa-check text-[10px] text-white"></i>
-                        </div>
-                    </label>
-                `;
+                        <div class="flex-grow"><h4 class="font-bold text-stone-900 text-xs uppercase">${prod.name}</h4><p class="text-stone-400 text-[10px]">$${prod.price.toLocaleString()}</p></div>
+                        <div class="w-6 h-6 rounded-full border-2 border-stone-200 peer-checked:bg-amber-500 flex items-center justify-center"><i class="fa-solid fa-check text-[10px] text-white"></i></div>
+                    </label>`;
                 container.appendChild(item);
             });
         }
 
         function toggleComboItem(id) {
-            const index = selectedComboItems.indexOf(id);
-            if (index > -1) {
-                selectedComboItems.splice(index, 1);
-            } else {
-                selectedComboItems.push(id);
-            }
+            const i = selectedComboItems.indexOf(id);
+            i > -1 ? selectedComboItems.splice(i, 1) : selectedComboItems.push(id);
             updateComboSummary();
         }
 
         function updateComboSummary() {
-            const listContainer = document.getElementById('selectedItemsList');
-            const subtotalLabel = document.getElementById('subtotalLabel');
-            const discountLabel = document.getElementById('discountLabel');
+            const list = document.getElementById('selectedItemsList');
+            const subLabel = document.getElementById('subtotalLabel');
+            const discLabel = document.getElementById('discountLabel');
             const totalLabel = document.getElementById('totalLabel');
             const btn = document.getElementById('btnSendCombo');
 
-            let subtotal = 0;
-            listContainer.innerHTML = "";
+            let sub = 0;
+            list.innerHTML = "";
 
             if (selectedComboItems.length === 0) {
-                listContainer.innerHTML = '<p class="text-stone-400 text-xs italic">No has seleccionado productos aún...</p>';
+                list.innerHTML = '<p class="text-stone-400 text-[11px] uppercase tracking-widest text-center py-10">Elige productos...</p>';
                 btn.disabled = true;
             } else {
                 btn.disabled = false;
                 selectedComboItems.forEach(itemId => {
-                    const product = customComboProducts.find(p => p.id === itemId);
-                    subtotal += product.price;
-                    
-                    const p = document.createElement('div');
-                    p.className = "flex justify-between text-xs font-bold text-stone-700";
-                    p.innerHTML = `<span>${product.icon} ${product.name}</span> <span>$${product.price.toLocaleString()}</span>`;
-                    listContainer.appendChild(p);
+                    const p = customComboProducts.find(x => x.id === itemId);
+                    sub += p.price;
+                    const div = document.createElement('div');
+                    div.className = "flex justify-between text-[11px] font-bold text-stone-700 uppercase tracking-tighter";
+                    div.innerHTML = `<span>${p.icon} ${p.name}</span> <span>$${p.price.toLocaleString()}</span>`;
+                    list.appendChild(div);
                 });
             }
-
-            const discount = subtotal * 0.05;
-            const total = subtotal - discount;
-
-            subtotalLabel.innerText = `$${subtotal.toLocaleString()}`;
-            discountLabel.innerText = `-$${discount.toLocaleString()}`;
-            totalLabel.innerText = `$${total.toLocaleString()}`;
+            const d = sub * 0.05;
+            const t = sub - d;
+            subLabel.innerText = `$${sub.toLocaleString()}`;
+            discLabel.innerText = `-$${d.toLocaleString()}`;
+            totalLabel.innerText = `$${t.toLocaleString()}`;
         }
 
         function sendCustomComboWhatsApp() {
-            const itemsNames = selectedComboItems.map(id => customComboProducts.find(p => p.id === id).name).join(", ");
+            const names = selectedComboItems.map(id => customComboProducts.find(x => x.id === id).name).join(", ");
             const total = document.getElementById('totalLabel').innerText;
-            const message = `¡Hola personalizARTE! Armé mi propio combo personalizado con: ${itemsNames}. El total con el 5% de descuento es ${total}. ¿Cómo procedemos con el diseño?`;
-            window.open(`https://wa.me/573043518387?text=${encodeURIComponent(message)}`, '_blank');
+            const msg = `¡Hola personalizARTE! Quiero mi combo personalizado: ${names}. Total con el 5% de descuento: ${total}.`;
+            window.open(`https://wa.me/573043518387?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
-        // Llamar a la inicialización al cargar la página
-        document.addEventListener("DOMContentLoaded", () => {
-            initCustomCombo();
-            // ... resto de tus funciones de inicio
-        });
-        
-        
-        const productsDb = [
-            { id: 1, title: "Agendas Media Carta", section: "agendas", sectionLabel: "📔 Agendas", price: "$37.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/WA_1782345325590_1_ic7crs.jpg", description: "Pasta dura 100% personalizada." },
-            { id: 2, title: "Vaso Viajero Térmico", section: "vasos", sectionLabel: "🥤 Vasos", price: "$20.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/v1782344875/IMG_20260624_175919174_1_pbd2gz.jpg", description: "Mantiene temperatura, diseño único." },
-            { id: 3, title: "Rosas Eternas (Bouquet)", section: "ramos", sectionLabel: "💐 Ramos", price: "Desde $30.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG-20260624-WA0005_1_ligazg.jpg", description: "Rosas artesanales que nunca marchitan." },
-            { id: 4, title: "Libreta Pequeña + lapicero", section: "agendas", sectionLabel: "📔 Agendas", price: "$23.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/IMG_20260624_175956387_1_hu1ki4.jpg", description: "Ideal para notas rápidas." },
-            { id: 5, title: "Mug Premium 11oz", section: "mugs", sectionLabel: "☕ Mugs", price: "$18.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/IMG_20260624_195209206_1_eqhht6.jpg", description: "Cerámica de alto brillo." },
-            { id: 6, title: "Botones Metálicos", section: "otros", sectionLabel: "🔘 Otros", price: "$4.000", image: "https://images.unsplash.com/photo-1590005354167-6da97870c913?w=600&q=80", description: "Pines de 58mm." }
-        ];
-
-        let activeSection = "todos";
-        let searchString = "";
-
-        function displayCatalog() {
-            const grid = document.getElementById("catalogGrid");
-            const noResults = document.getElementById("noProductsFound");
-            grid.innerHTML = "";
-            const filtered = productsDb.filter(p => (activeSection === "todos" || p.section === activeSection) && p.title.toLowerCase().includes(searchString.toLowerCase()));
-            if (filtered.length === 0) { noResults.classList.remove("hidden"); grid.classList.add("hidden"); return; }
-            noResults.classList.add("hidden"); grid.classList.remove("hidden");
-            filtered.forEach(p => {
-                const article = document.createElement("article");
-                article.className = "bg-white border rounded-[2.5rem] overflow-hidden hover:shadow-2xl transition-all cursor-pointer group";
-                article.onclick = () => showModalDetail(p);
-                article.innerHTML = `<img src="${p.image}" class="aspect-square object-cover w-full group-hover:scale-110 transition-all duration-700"><div class="p-7"><h3 class="font-bold text-stone-900">${p.title}</h3><div class="mt-4 flex justify-between items-center"><span class="text-xl font-black">${p.price}</span><span class="text-amber-500 font-bold text-xs uppercase">Ver más</span></div></div>`;
-                grid.appendChild(article);
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            displayCatalog();
-            document.querySelectorAll(".cat-tab").forEach(tab => tab.addEventListener("click", () => {
-                document.querySelectorAll(".cat-tab").forEach(b => b.className = "cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600");
-                tab.className = "cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-stone-900 text-white shadow-lg";
-                activeSection = tab.getAttribute("data-sec");
-                displayCatalog();
-            }));
-            document.getElementById("searchInput").addEventListener("input", (e) => { searchString = e.target.value; displayCatalog(); });
-        });
-
+        // 10.5 Handlers Globales (Simulador, Modal)
         function showModalDetail(p) {
             document.getElementById("modalName").innerText = p.title;
             document.getElementById("modalDesc").innerText = p.description;
             document.getElementById("modalPrice").innerText = p.price;
+            document.getElementById("modalSec").innerText = p.sectionLabel;
             document.getElementById("modalImg").src = p.image;
-            document.getElementById("modalWA").href = `https://wa.me/573043518387?text=Me%20interesa:%20${p.title}`;
+            document.getElementById("modalWA").href = `https://wa.me/573043518387?text=Me%20interesa:%20${encodeURIComponent(p.title)}`;
             document.getElementById("itemModal").classList.remove("hidden");
             document.getElementById("itemModal").classList.add("flex");
         }
@@ -365,17 +447,34 @@
         function closeModal() { document.getElementById("itemModal").classList.add("hidden"); }
 
         function loadSimImage(e) {
-            const reader = new FileReader();
-            reader.onload = f => { document.getElementById("sim-photo").style.backgroundImage = `url('${f.target.result}')`; document.getElementById("sim-photo").style.opacity = "1"; };
-            reader.readAsDataURL(e.target.files[0]);
+            const r = new FileReader();
+            r.onload = f => { 
+                document.getElementById("sim-photo").style.backgroundImage = `url('${f.target.result}')`; 
+                document.getElementById("sim-photo").style.opacity = "1";
+                document.getElementById("sim-label").style.display = "none";
+            };
+            r.readAsDataURL(e.target.files[0]);
         }
 
         function changeSimTemplate(t) {
             const h = document.getElementById("mug-handle");
             const p = document.getElementById("sim-preview");
-            if (t === 'mug') { h.classList.remove("hidden"); p.className = "relative w-64 h-64 bg-white rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden border-4 border-white"; }
-            else { h.classList.add("hidden"); p.className = "relative w-56 h-72 bg-white rounded-md shadow-2xl flex items-center justify-center overflow-hidden border-4 border-white"; }
+            if (t === 'mug') { h.classList.remove("hidden"); p.className = "relative w-64 h-64 bg-white rounded-[2.5rem] shadow-2xl flex items-center justify-center overflow-hidden border-[10px] border-white ring-1 ring-stone-100"; }
+            else { h.classList.add("hidden"); p.className = "relative w-56 h-72 bg-white rounded-xl shadow-2xl flex items-center justify-center overflow-hidden border-[10px] border-white ring-1 ring-stone-100"; }
         }
+
+        // 10.6 Inicialización Final
+        document.addEventListener("DOMContentLoaded", () => {
+            displayCatalog();
+            initCustomCombo();
+            document.querySelectorAll(".cat-tab").forEach(tab => tab.addEventListener("click", () => {
+                document.querySelectorAll(".cat-tab").forEach(b => b.className = "cat-tab px-8 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest whitespace-nowrap bg-white border border-stone-200 text-stone-500");
+                tab.className = "cat-tab px-8 py-3.5 rounded-2xl text-[11px] font-black uppercase tracking-widest whitespace-nowrap bg-stone-900 text-white shadow-xl";
+                activeSection = tab.getAttribute("data-sec");
+                displayCatalog();
+            }));
+            document.getElementById("searchInput").addEventListener("input", (e) => { searchString = e.target.value; displayCatalog(); });
+        });
     </script>
 </body>
 </html>
