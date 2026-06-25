@@ -259,8 +259,7 @@
                 image: https://res.cloudinary.com/dw9hwkkbl/image/upload/v1782349042/IMG_20260624_195209206_1_eqhht6.jpg", 
                 description: "Taza de cerámica de alto brillo. Resistente al microondas y lavavajillas. Personalización completa." 
             },
-            { 
-                id: 6, 
+            {id: 6, 
                 title: "Botones Metálicos 58mm", 
                 section: "otros", 
                 sectionLabel: "🔘 Botones", 
@@ -305,86 +304,4 @@
                         <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <span class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-xl text-[9px] font-black uppercase text-stone-700 shadow-sm">${p.sectionLabel}</span>
                     </div>
-                    <div class="p-7">
-                        <h3 class="font-bold text-stone-900 group-hover:text-amber-600 transition-colors">${p.title}</h3>
-                        <div class="mt-4 flex items-center justify-between">
-                            <span class="text-xl font-black text-stone-900">${p.price}</span>
-                            <span class="w-10 h-10 bg-stone-50 rounded-full flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white transition-all"><i class="fa-solid fa-plus text-xs"></i></span>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(article);
-            });
-        }
-
-        // 3. INICIALIZACIÓN
-        document.addEventListener("DOMContentLoaded", () => {
-            displayCatalog();
-
-            // Tabs Categorías
-            document.querySelectorAll(".cat-tab").forEach(tab => {
-                tab.addEventListener("click", () => {
-                    document.querySelectorAll(".cat-tab").forEach(btn => {
-                        btn.className = "cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-white border border-stone-200 text-stone-600 hover:bg-stone-50 transition-all";
-                    });
-                    tab.className = "cat-tab px-6 py-3 rounded-2xl text-xs font-bold whitespace-nowrap bg-stone-900 text-white shadow-lg transition-all";
-                    activeSection = tab.getAttribute("data-sec");
-                    displayCatalog();
-                });
-            });
-
-            // Buscador
-            document.getElementById("searchInput").addEventListener("input", (e) => {
-                searchString = e.target.value;
-                displayCatalog();
-            });
-        });
-
-        // 4. FUNCIONES MODAL
-        function showModalDetail(p) {
-            document.getElementById("modalName").innerText = p.title;
-            document.getElementById("modalDesc").innerText = p.description;
-            document.getElementById("modalPrice").innerText = p.price;
-            document.getElementById("modalSec").innerText = p.sectionLabel;
-            document.getElementById("modalImg").src = p.image;
-            document.getElementById("modalWA").href = `https://wa.me/573043518387?text=Hola%20personalizARTE,%20me%20interesa:%20${encodeURIComponent(p.title)}`;
-            
-            const modal = document.getElementById("itemModal");
-            modal.classList.remove("hidden");
-            modal.classList.add("flex");
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("itemModal");
-            modal.classList.add("hidden");
-            modal.classList.remove("flex");
-        }
-
-        // 5. SIMULADOR
-        function loadSimImage(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    document.getElementById("sim-photo").style.backgroundImage = `url('${event.target.result}')`;
-                    document.getElementById("sim-photo").style.opacity = "1";
-                    document.getElementById("sim-label").style.display = "none";
-                }
-                reader.readAsDataURL(file);
-            }
-        }
-
-        function changeSimTemplate(type) {
-            const handle = document.getElementById("mug-handle");
-            const preview = document.getElementById("sim-preview");
-            if (type === 'mug') {
-                handle.classList.remove("hidden");
-                preview.className = "relative w-64 h-64 bg-white rounded-3xl shadow-2xl border-4 border-white flex items-center justify-center overflow-hidden";
-            } else {
-                handle.classList.add("hidden");
-                preview.className = "relative w-56 h-72 bg-white rounded-md shadow-2xl border-4 border-white flex items-center justify-center overflow-hidden";
-            }
-        }
-    </script>
-</body>
-</html>
+           
