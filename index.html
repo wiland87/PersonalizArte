@@ -240,6 +240,103 @@
     </div>
 
     <script>
+
+// Datos para el "Arma tu combo"
+        const customComboProducts = [
+            { id: 'c1', name: 'Mug 11 Onzas', price: 15000, icon: '☕' },
+            { id: 'c2', name: 'Agenda Media Carta', price: 37000, icon: '📔' },
+            { id: 'c3', name: 'Libreta Pequeña', price: 20000, icon: '📒' },
+            { id: 'c4', name: 'Vaso Viajero', price: 20000, icon: '🥤' },
+            { id: 'c5', name: 'Botón Metálico', price: 3500, icon: '🔘' },
+            { id: 'c6', name: 'Rosas Eternas', price: 30000, icon: '💐' },
+            { id: 'c7', name: 'Llavero (2 fotos)', price: 10000, icon: '🔑' },
+            { id: 'c8', name: 'Lapicero Personalizado', price: 5000, icon: '🖊️' }
+        ];
+
+        let selectedComboItems = [];
+
+        function initCustomCombo() {
+            const container = document.getElementById('customComboOptions');
+            if(!container) return;
+
+            customComboProducts.forEach(prod => {
+                const item = document.createElement('div');
+                item.className = "relative";
+                item.innerHTML = `
+                    <input type="checkbox" id="${prod.id}" value="${prod.id}" class="hidden peer" onchange="toggleComboItem('${prod.id}')">
+                    <label for="${prod.id}" class="flex items-center p-4 bg-white border-2 border-stone-100 rounded-2xl cursor-pointer hover:border-amber-200 peer-checked:border-amber-500 peer-checked:bg-amber-50 transition-all select-none">
+                        <span class="text-2xl mr-4">${prod.icon}</span>
+                        <div class="flex-grow">
+                            <h4 class="font-bold text-stone-900 text-sm">${prod.name}</h4>
+                            <p class="text-stone-500 text-xs">$${prod.price.toLocaleString()}</p>
+                        </div>
+                        <div class="w-6 h-6 rounded-full border-2 border-stone-200 peer-checked:bg-amber-500 flex items-center justify-center">
+                            <i class="fa-solid fa-check text-[10px] text-white"></i>
+                        </div>
+                    </label>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function toggleComboItem(id) {
+            const index = selectedComboItems.indexOf(id);
+            if (index > -1) {
+                selectedComboItems.splice(index, 1);
+            } else {
+                selectedComboItems.push(id);
+            }
+            updateComboSummary();
+        }
+
+        function updateComboSummary() {
+            const listContainer = document.getElementById('selectedItemsList');
+            const subtotalLabel = document.getElementById('subtotalLabel');
+            const discountLabel = document.getElementById('discountLabel');
+            const totalLabel = document.getElementById('totalLabel');
+            const btn = document.getElementById('btnSendCombo');
+
+            let subtotal = 0;
+            listContainer.innerHTML = "";
+
+            if (selectedComboItems.length === 0) {
+                listContainer.innerHTML = '<p class="text-stone-400 text-xs italic">No has seleccionado productos aún...</p>';
+                btn.disabled = true;
+            } else {
+                btn.disabled = false;
+                selectedComboItems.forEach(itemId => {
+                    const product = customComboProducts.find(p => p.id === itemId);
+                    subtotal += product.price;
+                    
+                    const p = document.createElement('div');
+                    p.className = "flex justify-between text-xs font-bold text-stone-700";
+                    p.innerHTML = `<span>${product.icon} ${product.name}</span> <span>$${product.price.toLocaleString()}</span>`;
+                    listContainer.appendChild(p);
+                });
+            }
+
+            const discount = subtotal * 0.05;
+            const total = subtotal - discount;
+
+            subtotalLabel.innerText = `$${subtotal.toLocaleString()}`;
+            discountLabel.innerText = `-$${discount.toLocaleString()}`;
+            totalLabel.innerText = `$${total.toLocaleString()}`;
+        }
+
+        function sendCustomComboWhatsApp() {
+            const itemsNames = selectedComboItems.map(id => customComboProducts.find(p => p.id === id).name).join(", ");
+            const total = document.getElementById('totalLabel').innerText;
+            const message = `¡Hola personalizARTE! Armé mi propio combo personalizado con: ${itemsNames}. El total con el 5% de descuento es ${total}. ¿Cómo procedemos con el diseño?`;
+            window.open(`https://wa.me/573043518387?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // Llamar a la inicialización al cargar la página
+        document.addEventListener("DOMContentLoaded", () => {
+            initCustomCombo();
+            // ... resto de tus funciones de inicio
+        });
+        
+        
         const productsDb = [
             { id: 1, title: "Agendas Media Carta", section: "agendas", sectionLabel: "📔 Agendas", price: "$37.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/WA_1782345325590_1_ic7crs.jpg", description: "Pasta dura 100% personalizada." },
             { id: 2, title: "Vaso Viajero Térmico", section: "vasos", sectionLabel: "🥤 Vasos", price: "$20.000", image: "https://res.cloudinary.com/dw9hwkkbl/image/upload/f_auto,q_auto/v1782344875/IMG_20260624_175919174_1_pbd2gz.jpg", description: "Mantiene temperatura, diseño único." },
